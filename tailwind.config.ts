@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -18,6 +19,9 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'matrix': ['Source Code Pro', 'Courier New', 'monospace'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -61,6 +65,10 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				matrix: {
+					green: '#00FF41',
+					dark: '#008F11',
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'matrix-rain': {
+					'0%': {
+						transform: 'translateY(-100vh)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(100vh)',
+						opacity: '0'
+					}
+				},
+				'pulse-green': {
+					'0%, 100%': {
+						opacity: '1'
+					},
+					'50%': {
+						opacity: '0.7'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'matrix-rain': 'matrix-rain 8s linear infinite',
+				'pulse-green': 'pulse-green 2s ease-in-out infinite'
 			}
 		}
 	},

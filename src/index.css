@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -35,47 +38,35 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    --matrix-green: #00FF41;
+    --dark-green: #008F11;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -97,5 +88,83 @@
 
   body {
     @apply bg-background text-foreground;
+    font-family: 'Source Code Pro', 'Courier New', monospace;
+  }
+}
+
+/* Matrix Rain Animation */
+@keyframes matrixRain {
+  0% {
+    transform: translateY(-100vh);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.matrix-rain {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.matrix-char {
+  position: absolute;
+  color: var(--matrix-green);
+  font-family: 'Source Code Pro', monospace;
+  font-size: 14px;
+  animation: matrixRain 8s linear infinite;
+  text-shadow: 0 0 5px var(--matrix-green);
+}
+
+/* Glow effects */
+.matrix-glow {
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+}
+
+.matrix-text-glow {
+  text-shadow: 0 0 10px var(--matrix-green);
+}
+
+.matrix-border-glow {
+  border: 1px solid var(--matrix-green);
+  box-shadow: 
+    0 0 5px var(--matrix-green),
+    inset 0 0 5px rgba(0, 255, 65, 0.1);
+}
+
+/* Pulse animation */
+@keyframes pulse-green {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.pulse-green {
+  animation: pulse-green 2s ease-in-out infinite;
+}
+
+/* Hover effects */
+.hover-matrix-glow:hover {
+  box-shadow: 
+    0 0 30px rgba(0, 255, 65, 0.6),
+    inset 0 0 10px rgba(0, 255, 65, 0.2);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* Responsive text */
+@media (max-width: 640px) {
+  .matrix-char {
+    font-size: 12px;
   }
 }
