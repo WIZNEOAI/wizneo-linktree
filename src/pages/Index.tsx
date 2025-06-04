@@ -34,14 +34,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-black text-white font-matrix relative overflow-hidden">
-      {/* Matrix Rain Background */}
+      {/* Background Effects - Behind everything */}
       <MatrixRain />
-      
-      {/* Random Floating Particles */}
       <FloatingParticles />
       
-      {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-8">
+      {/* Main Content - Above background effects */}
+      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8">
         <div className="w-full max-w-md mx-auto space-y-8">
           
           {/* Profile Section */}

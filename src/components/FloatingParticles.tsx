@@ -23,9 +23,9 @@ const FloatingParticles = () => {
           id: i,
           top: Math.random() * 100, // Random position from 0% to 100%
           left: Math.random() * 100, // Random position from 0% to 100%
-          size: Math.random() * 8 + 4, // Random size between 4px and 12px
-          opacity: Math.random() * 0.6 + 0.2, // Random opacity between 0.2 and 0.8
-          animationDelay: Math.random() * 8, // Random delay up to 8 seconds
+          size: Math.random() * 6 + 3, // Random size between 3px and 9px (smaller)
+          opacity: Math.random() * 0.4 + 0.1, // Random opacity between 0.1 and 0.5 (more subtle)
+          animationDelay: Math.random() * 12, // Random delay up to 12 seconds (slower)
         });
       }
 
@@ -34,8 +34,8 @@ const FloatingParticles = () => {
 
     generateParticles();
 
-    // Regenerate particles every 10 seconds for more dynamic effect
-    const interval = setInterval(generateParticles, 10000);
+    // Regenerate particles every 15 seconds for more gentle dynamic effect
+    const interval = setInterval(generateParticles, 15000);
 
     // Handle window resize
     const handleResize = () => generateParticles();
@@ -48,11 +48,11 @@ const FloatingParticles = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0 pointer-events-none">
+    <div className="fixed inset-0 pointer-events-none z-0">
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute bg-matrix-green rounded-full animate-ping"
+          className="absolute bg-matrix-green rounded-full animate-pulse"
           style={{
             top: `${particle.top}%`,
             left: `${particle.left}%`,
@@ -60,6 +60,7 @@ const FloatingParticles = () => {
             height: `${particle.size}px`,
             opacity: particle.opacity,
             animationDelay: `${particle.animationDelay}s`,
+            animationDuration: '4s', // Slower pulse animation
           }}
         />
       ))}
