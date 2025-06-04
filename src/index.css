@@ -104,6 +104,24 @@
   }
 }
 
+/* Matrix Falling Dots Animation */
+@keyframes matrixFall {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 .matrix-rain {
   position: absolute;
   top: -100vh;
@@ -121,6 +139,10 @@
   font-size: 14px;
   animation: matrixRain 8s linear infinite;
   text-shadow: 0 0 5px var(--matrix-green);
+}
+
+.animate-matrix-fall {
+  animation: matrixFall linear infinite;
 }
 
 /* Glow effects */

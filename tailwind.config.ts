@@ -103,6 +103,22 @@ export default {
 						opacity: '0'
 					}
 				},
+				'matrix-fall': {
+					'0%': {
+						transform: 'translateY(-20px)',
+						opacity: '0'
+					},
+					'10%': {
+						opacity: '1'
+					},
+					'90%': {
+						opacity: '0.8'
+					},
+					'100%': {
+						transform: 'translateY(100vh)',
+						opacity: '0'
+					}
+				},
 				'pulse-green': {
 					'0%, 100%': {
 						opacity: '1'
@@ -116,6 +132,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'matrix-rain': 'matrix-rain 8s linear infinite',
+				'matrix-fall': 'matrix-fall linear infinite',
 				'pulse-green': 'pulse-green 2s ease-in-out infinite'
 			}
 		}
