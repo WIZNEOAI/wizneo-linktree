@@ -2,6 +2,7 @@
 import React from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
+import FloatingParticles from '@/components/FloatingParticles';
 
 const Index = () => {
   const links = [
@@ -35,6 +36,9 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white font-matrix relative overflow-hidden">
       {/* Matrix Rain Background */}
       <MatrixRain />
+      
+      {/* Random Floating Particles */}
+      <FloatingParticles />
       
       {/* Main Content */}
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-8">
@@ -92,49 +96,6 @@ const Index = () => {
           </div>
           
         </div>
-      </div>
-
-      {/* Enhanced floating particles effect - More visible and distributed */}
-      <div className="absolute inset-0 pointer-events-none">
-        {/* Top section particles */}
-        <div className="absolute top-[10%] left-[15%] w-2 h-2 bg-matrix-green rounded-full 
-                       animate-ping opacity-60"></div>
-        <div className="absolute top-[20%] right-[20%] w-1.5 h-1.5 bg-matrix-green rounded-full 
-                       animate-ping opacity-50" style={{ animationDelay: '0.5s' }}></div>
-        <div className="absolute top-[30%] left-[80%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-40" style={{ animationDelay: '1s' }}></div>
-        
-        {/* Middle section particles */}
-        <div className="absolute top-[45%] left-[10%] w-1.5 h-1.5 bg-matrix-green rounded-full 
-                       animate-ping opacity-50" style={{ animationDelay: '1.5s' }}></div>
-        <div className="absolute top-[55%] right-[15%] w-2 h-2 bg-matrix-green rounded-full 
-                       animate-ping opacity-45" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute top-[65%] left-[75%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-35" style={{ animationDelay: '2.5s' }}></div>
-        
-        {/* Bottom section particles */}
-        <div className="absolute top-[75%] left-[25%] w-1.5 h-1.5 bg-matrix-green rounded-full 
-                       animate-ping opacity-55" style={{ animationDelay: '3s' }}></div>
-        <div className="absolute top-[85%] right-[30%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-40" style={{ animationDelay: '3.5s' }}></div>
-        <div className="absolute top-[90%] left-[60%] w-2 h-2 bg-matrix-green rounded-full 
-                       animate-ping opacity-50" style={{ animationDelay: '4s' }}></div>
-        
-        {/* Additional scattered particles */}
-        <div className="absolute top-[35%] left-[5%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-30" style={{ animationDelay: '4.5s' }}></div>
-        <div className="absolute top-[70%] right-[10%] w-1.5 h-1.5 bg-matrix-green rounded-full 
-                       animate-ping opacity-45" style={{ animationDelay: '5s' }}></div>
-        <div className="absolute top-[40%] right-[5%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-35" style={{ animationDelay: '5.5s' }}></div>
-        <div className="absolute top-[80%] left-[40%] w-1.5 h-1.5 bg-matrix-green rounded-full 
-                       animate-ping opacity-40" style={{ animationDelay: '6s' }}></div>
-        
-        {/* Mobile optimized particles */}
-        <div className="absolute top-[25%] left-[50%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-35 md:hidden" style={{ animationDelay: '6.5s' }}></div>
-        <div className="absolute top-[60%] left-[30%] w-1 h-1 bg-matrix-green rounded-full 
-                       animate-ping opacity-30 md:hidden" style={{ animationDelay: '7s' }}></div>
       </div>
     </div>
   );
