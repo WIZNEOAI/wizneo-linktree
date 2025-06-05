@@ -52,7 +52,6 @@ const Index = () => {
                 alt="WIZNEO Profile"
                 className="w-full h-full object-cover"
               />
-              <div className="absolute inset-0 bg-matrix-green/10 hover:bg-matrix-green/20 transition-all duration-300"></div>
             </div>
             
             {/* Brand Name */}
