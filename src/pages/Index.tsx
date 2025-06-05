@@ -47,10 +47,12 @@ const Index = () => {
             {/* Profile Picture */}
             <div className="relative mx-auto w-32 h-32 rounded-full overflow-hidden 
                            matrix-border-glow hover:matrix-glow transition-all duration-300">
-              <div className="w-full h-full bg-gradient-to-br from-matrix-green/20 to-matrix-dark/20 
-                             flex items-center justify-center text-4xl">
-                🧠
-              </div>
+              <img 
+                src="/lovable-uploads/022926f2-d892-48e3-9bd7-6c41fcffe005.png"
+                alt="WIZNEO Profile"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-matrix-green/10 hover:bg-matrix-green/20 transition-all duration-300"></div>
             </div>
             
             {/* Brand Name */}
