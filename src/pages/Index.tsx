@@ -48,7 +48,7 @@ const Index = () => {
             <div className="relative mx-auto w-32 h-32 rounded-full overflow-hidden 
                            matrix-border-glow hover:matrix-glow transition-all duration-300">
               <img 
-                src="/lovable-uploads/022926f2-d892-48e3-9bd7-6c41fcffe005.png"
+                src="/lovable-uploads/b1450d9f-9322-41fe-a4d5-07d8c6b9e0c8.png"
                 alt="WIZNEO Profile"
                 className="w-full h-full object-cover"
               />
