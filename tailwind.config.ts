@@ -103,6 +103,34 @@ export default {
 						opacity: '0'
 					}
 				},
+				'matrix-binary-fall': {
+					'0%': {
+						transform: 'translateY(-10vh)',
+						opacity: '0'
+					},
+					'5%': {
+						opacity: '1'
+					},
+					'20%': {
+						opacity: '0.9'
+					},
+					'40%': {
+						opacity: '0.7'
+					},
+					'60%': {
+						opacity: '0.5'
+					},
+					'80%': {
+						opacity: '0.3'
+					},
+					'95%': {
+						opacity: '0.1'
+					},
+					'100%': {
+						transform: 'translateY(110vh)',
+						opacity: '0'
+					}
+				},
 				'matrix-fall': {
 					'0%': {
 						transform: 'translateY(-20px)',
@@ -132,6 +160,7 @@ export default {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'matrix-rain': 'matrix-rain 8s linear infinite',
+				'matrix-binary-fall': 'matrix-binary-fall linear infinite',
 				'matrix-fall': 'matrix-fall linear infinite',
 				'pulse-green': 'pulse-green 2s ease-in-out infinite'
 			}
