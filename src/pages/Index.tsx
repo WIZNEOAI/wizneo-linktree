@@ -39,14 +39,16 @@ const Index = () => {
       <FloatingParticles />
       
       {/* Main Content - Above background effects */}
-      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center px-4 py-8">
-        <div className="w-full max-w-md mx-auto space-y-8">
+      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center 
+                      px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto space-y-6 sm:space-y-8">
           
           {/* Profile Section */}
-          <div className="text-center space-y-6">
+          <div className="text-center space-y-4 sm:space-y-6">
             {/* Profile Picture */}
-            <div className="relative mx-auto w-32 h-32 rounded-full overflow-hidden 
-                           matrix-border-glow hover:matrix-glow transition-all duration-300">
+            <div className="relative mx-auto w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 
+                           rounded-full overflow-hidden matrix-border-glow hover:matrix-glow 
+                           transition-all duration-300 transform hover:scale-105">
               <img 
                 src="/lovable-uploads/b1450d9f-9322-41fe-a4d5-07d8c6b9e0c8.png"
                 alt="WIZNEO Profile"
@@ -55,28 +57,31 @@ const Index = () => {
             </div>
             
             {/* Brand Name */}
-            <div className="space-y-2">
-              <h1 className="text-4xl font-bold text-matrix-green matrix-text-glow 
-                            font-matrix tracking-wider">
+            <div className="space-y-2 sm:space-y-3">
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold 
+                            text-matrix-green matrix-text-glow font-matrix tracking-wider
+                            transform transition-all duration-300 hover:scale-105">
                 WIZNEO
               </h1>
-              <div className="h-px w-24 mx-auto bg-gradient-to-r from-transparent 
-                             via-matrix-green to-transparent pulse-green"></div>
+              <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r 
+                             from-transparent via-matrix-green to-transparent pulse-green"></div>
             </div>
             
             {/* Tagline */}
-            <p className="text-lg text-gray-300 font-matrix leading-relaxed px-4 
-                          hover:text-matrix-green transition-colors duration-500">
+            <p className="text-base sm:text-lg lg:text-xl text-gray-300 font-matrix 
+                          leading-relaxed px-2 sm:px-4 lg:px-6 hover:text-matrix-green 
+                          transition-colors duration-500 text-center">
               Transforma tu realidad, reprograma tu mente.
             </p>
           </div>
 
           {/* Links Section */}
-          <div className="space-y-4 w-full">
+          <div className="space-y-3 sm:space-y-4 w-full">
             {links.map((link, index) => (
               <div 
                 key={index} 
-                className="animate-pulse-green"
+                className="animate-pulse-green transform transition-all duration-300 
+                          hover:scale-[1.02] active:scale-[0.98]"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <LinkCard {...link} />
@@ -85,11 +90,12 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <div className="text-center pt-8">
-            <div className="text-matrix-green/60 text-sm font-matrix">
+          <div className="text-center pt-6 sm:pt-8 space-y-2">
+            <div className="text-matrix-green/60 text-sm sm:text-base font-matrix 
+                           tracking-wider hover:text-matrix-green transition-colors duration-300">
               [ TECHWIZ ACTIVATED ]
             </div>
-            <div className="mt-2 text-xs text-gray-500 font-matrix">
+            <div className="text-xs sm:text-sm text-gray-500 font-matrix tracking-wide">
               © 2025 WIZNEO — Tecnología Espiritual
             </div>
           </div>

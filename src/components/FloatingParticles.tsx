@@ -17,19 +17,21 @@ const FloatingParticles = () => {
 
   useEffect(() => {
     const generateParticles = () => {
-      const numParticles = window.innerWidth < 768 ? 25 : 40; // Más partículas para efecto Matrix
+      // Menos partículas en móvil para mejor rendimiento
+      const isMobile = window.innerWidth < 768;
+      const numParticles = isMobile ? 15 : window.innerWidth < 1024 ? 25 : 35;
       const newParticles: Particle[] = [];
 
       for (let i = 0; i < numParticles; i++) {
         newParticles.push({
           id: i,
-          left: Math.random() * 100, // Posición horizontal aleatoria
-          char: Math.random() > 0.5 ? '1' : '0', // Aleatorio entre 1 y 0
-          size: Math.random() * 6 + 12, // Tamaño de fuente entre 12px y 18px
-          opacity: Math.random() * 0.7 + 0.2, // Opacidad visible
-          animationDelay: -(Math.random() * 20), // Delay negativo para que ya esté corriendo
-          animationDuration: Math.random() * 10 + 8, // Velocidad de caída variable (8-18 segundos)
-          initialPosition: Math.random() * 100, // Posición inicial aleatoria en Y
+          left: Math.random() * 100,
+          char: Math.random() > 0.5 ? '1' : '0',
+          size: isMobile ? Math.random() * 4 + 10 : Math.random() * 6 + 12,
+          opacity: Math.random() * 0.6 + 0.2,
+          animationDelay: -(Math.random() * 20),
+          animationDuration: Math.random() * 8 + 10, // Más lento en móvil
+          initialPosition: Math.random() * 100,
         });
       }
 
@@ -38,7 +40,6 @@ const FloatingParticles = () => {
 
     generateParticles();
 
-    // Handle window resize
     const handleResize = () => generateParticles();
     window.addEventListener('resize', handleResize);
 
@@ -52,7 +53,8 @@ const FloatingParticles = () => {
       {particles.map((particle) => (
         <div
           key={particle.id}
-          className="absolute text-matrix-green font-matrix animate-matrix-binary-fall"
+          className="absolute text-matrix-green font-matrix animate-matrix-binary-fall
+                     will-change-transform"
           style={{
             left: `${particle.left}%`,
             fontSize: `${particle.size}px`,
@@ -60,7 +62,7 @@ const FloatingParticles = () => {
             animationDelay: `${particle.animationDelay}s`,
             animationDuration: `${particle.animationDuration}s`,
             top: `${particle.initialPosition}%`,
-            textShadow: '0 0 10px rgba(0, 255, 65, 0.5)',
+            textShadow: '0 0 8px rgba(0, 255, 65, 0.4)',
           }}
         >
           {particle.char}
