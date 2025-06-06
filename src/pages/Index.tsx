@@ -64,7 +64,7 @@ const Index = () => {
                 WIZNEO
               </h1>
               <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r 
-                             from-transparent via-matrix-green to-transparent pulse-green"></div>
+                             from-transparent via-matrix-green to-transparent"></div>
             </div>
             
             {/* Tagline */}
@@ -80,9 +80,8 @@ const Index = () => {
             {links.map((link, index) => (
               <div 
                 key={index} 
-                className="animate-pulse-green transform transition-all duration-300 
+                className="transform transition-all duration-300 
                           hover:scale-[1.02] active:scale-[0.98]"
-                style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <LinkCard {...link} />
               </div>
