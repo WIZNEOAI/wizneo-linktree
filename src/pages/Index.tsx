@@ -10,7 +10,7 @@ const Index = () => {
       icon: "🔮",
       title: "Mentoría 1:1 de Transformación",
       description: "Desbloquea. Reprograma. Despierta.",
-      url: "https://calendly.com/wizneo"
+      url: "https://calendly.com/gnosixio/mentoria-1-1-de-transformacion"
     },
     {
       icon: "📺",
@@ -22,13 +22,13 @@ const Index = () => {
       icon: "📸",
       title: "Instagram – Herramientas IA",
       description: "Consejos y tips para sacarle el mayor provecho a la inteligencia artificial",
-      url: "https://instagram.com/wizneo"
+      url: "https://www.instagram.com/wizneo.io/"
     },
     {
       icon: "🎥",
       title: "TikTok – Filosofía y espiritualidad consciente",
       description: "Como es arriba es abajo, como es adentro es afuera.",
-      url: "https://tiktok.com/@wizneo"
+      url: "https://www.tiktok.com/@wizneo.io"
     }
   ];
 
@@ -87,10 +87,10 @@ const Index = () => {
           {/* Footer */}
           <div className="text-center pt-8">
             <div className="text-matrix-green/60 text-sm font-matrix">
-              [ MATRIX LOADING... ]
+              [ TECHWIZ ACTIVATED ]
             </div>
             <div className="mt-2 text-xs text-gray-500 font-matrix">
-              © 2024 WIZNEO - Spiritual Technology
+              © 2025 WIZNEO — Tecnología Espiritual
             </div>
           </div>
           
