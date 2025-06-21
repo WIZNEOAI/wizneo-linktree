@@ -1,4 +1,3 @@
-
 import React from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
@@ -6,12 +5,6 @@ import FloatingParticles from '@/components/FloatingParticles';
 
 const Index = () => {
   const links = [
-    {
-      icon: "🔮",
-      title: "Mentoría 1:1 de Transformación",
-      description: "Desbloquea. Reprograma. Despierta.",
-      url: "https://calendly.com/gnosixio/mentoria-1-1-de-transformacion"
-    },
     {
       icon: "📺",
       title: "YouTube – Tutoriales IA",
