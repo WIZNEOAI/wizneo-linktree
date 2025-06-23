@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { ExternalLink, DollarSign, Bot, CircleDot } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
+import { getIcon } from '../utils/iconMapping';
 
 interface LinkCardProps {
   icon: string;
@@ -18,18 +19,10 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
     }
   };
 
-  // Función para renderizar el icono correcto
+  // Función para renderizar el icono usando el nuevo sistema
   const renderIcon = () => {
-    switch (icon) {
-      case 'youtube':
-        return <DollarSign className="text-matrix-green" size={24} />;
-      case 'instagram':
-        return <Bot className="text-matrix-green" size={24} />;
-      case 'tiktok':
-        return <CircleDot className="text-matrix-green" size={24} />;
-      default:
-        return <span className="text-xl sm:text-2xl">{icon}</span>;
-    }
+    const IconComponent = getIcon(icon);
+    return <IconComponent className="text-matrix-green" size={24} />;
   };
 
   return (
