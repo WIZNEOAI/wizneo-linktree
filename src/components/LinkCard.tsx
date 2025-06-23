@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink, DollarSign, Bot, YinYang } from 'lucide-react';
+import { ExternalLink, DollarSign, Bot, CircleDot } from 'lucide-react';
 
 interface LinkCardProps {
   icon: string;
@@ -26,7 +26,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
       case 'instagram':
         return <Bot className="text-matrix-green" size={24} />;
       case 'tiktok':
-        return <YinYang className="text-matrix-green" size={24} />;
+        return <CircleDot className="text-matrix-green" size={24} />;
       default:
         return <span className="text-xl sm:text-2xl">{icon}</span>;
     }
