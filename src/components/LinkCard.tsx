@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, DollarSign, Bot, YinYang } from 'lucide-react';
 
 interface LinkCardProps {
   icon: string;
@@ -18,6 +18,20 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
     }
   };
 
+  // Función para renderizar el icono correcto
+  const renderIcon = () => {
+    switch (icon) {
+      case 'youtube':
+        return <DollarSign className="text-matrix-green" size={24} />;
+      case 'instagram':
+        return <Bot className="text-matrix-green" size={24} />;
+      case 'tiktok':
+        return <YinYang className="text-matrix-green" size={24} />;
+      default:
+        return <span className="text-xl sm:text-2xl">{icon}</span>;
+    }
+  };
+
   return (
     <div 
       onClick={handleClick}
@@ -27,9 +41,9 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
                  transform hover:translate-y-[-2px] active:translate-y-0"
     >
       <div className="flex items-start space-x-3 sm:space-x-4">
-        <div className="text-xl sm:text-2xl flex-shrink-0 group-hover:scale-110 
+        <div className="flex-shrink-0 group-hover:scale-110 
                        transition-transform duration-300 group-active:scale-105">
-          {icon}
+          {renderIcon()}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-1 sm:mb-2">

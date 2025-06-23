@@ -1,3 +1,4 @@
+
 import React from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
@@ -6,19 +7,19 @@ import FloatingParticles from '@/components/FloatingParticles';
 const Index = () => {
   const links = [
     {
-      icon: "📺",
+      icon: "youtube",
       title: "YouTube – Tutoriales IA",
       description: "Aprende a como generar productos digitales sin ser un experto en programación",
       url: "https://www.youtube.com/@wiz-neo"
     },
     {
-      icon: "📸",
+      icon: "instagram",
       title: "Instagram – Herramientas IA",
       description: "Consejos y tips para sacarle el mayor provecho a la inteligencia artificial",
       url: "https://www.instagram.com/wizneo.io/"
     },
     {
-      icon: "🎥",
+      icon: "tiktok",
       title: "TikTok – Filosofía y espiritualidad consciente",
       description: "Como es arriba es abajo, como es adentro es afuera.",
       url: "https://www.tiktok.com/@wizneo.io"
