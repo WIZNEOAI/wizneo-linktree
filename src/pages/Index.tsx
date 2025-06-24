@@ -83,13 +83,9 @@ const Index = () => {
           </div>
 
           {/* Footer */}
-          <div className="text-center pt-6 sm:pt-8 space-y-2">
-            <div className="text-matrix-green/60 text-sm sm:text-base font-matrix 
-                           tracking-wider hover:text-matrix-green transition-colors duration-300">
-              [ TECHWIZ ACTIVATED ]
-            </div>
+          <div className="text-center pt-6 sm:pt-8">
             <div className="text-xs sm:text-sm text-gray-500 font-matrix tracking-wide">
-              © 2025 WIZNEO — Tecnología Espiritual
+              © 2025 WIZNEO
             </div>
           </div>
           
