@@ -7,7 +7,7 @@ import {
   Star,
   Crown,
   Gem,
-  YinYang,
+  Sparkles,
   LucideIcon
 } from 'lucide-react';
 
@@ -15,7 +15,7 @@ import {
 export const iconMap: Record<string, LucideIcon> = {
   youtube: DollarSign,
   instagram: Bot,
-  tiktok: YinYang, // Representa dualidad y filosofía espiritual
+  tiktok: Sparkles, // Representa transformación y energía espiritual
   // Fallbacks adicionales
   default: Star,
   external: ExternalLink,
