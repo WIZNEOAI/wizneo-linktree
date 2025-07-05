@@ -3,7 +3,7 @@ import {
   ExternalLink, 
   DollarSign, 
   Bot, 
-  Sparkles,
+  Alien,
   Star,
   Zap,
   Crown,
@@ -15,7 +15,7 @@ import {
 export const iconMap: Record<string, LucideIcon> = {
   youtube: DollarSign,
   instagram: Bot,
-  tiktok: Sparkles, // Representa magia/espiritualidad
+  tiktok: Alien, // Cambiado de Sparkles a Alien
   // Fallbacks adicionales
   default: Star,
   external: ExternalLink,
