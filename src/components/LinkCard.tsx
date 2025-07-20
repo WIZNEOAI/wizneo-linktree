@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
-import { getIcon } from '../utils/iconMapping';
+import { getIcon } from '@/utils/iconMapping';
 
 interface LinkCardProps {
   icon: string;
