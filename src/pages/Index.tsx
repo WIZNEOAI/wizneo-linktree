@@ -3,7 +3,7 @@ import React from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
-import { getIcon } from '@/utils/iconMapping';
+import { SocialIcon } from 'react-social-icons';
 
 const Index = () => {
   const links = [
@@ -92,26 +92,26 @@ const Index = () => {
           {/* Social Media Icons */}
           <div className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
-              {[
-                { icon: 'instagram', url: '#' },
-                { icon: 'tiktok', url: '#' },
-                { icon: 'youtube', url: '#' },
-                { icon: 'x', url: '#' }
-              ].map((social, index) => {
-                const IconComponent = getIcon(social.icon);
-                return (
-                  <a
-                    key={index}
-                    href={social.url}
-                    className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center
-                             rounded-full matrix-border-glow hover:matrix-glow
-                             transition-all duration-300 transform hover:scale-110
-                             text-gray-400 hover:text-matrix-green"
-                  >
-                    <IconComponent size={24} className="sm:w-6 sm:h-6" />
-                  </a>
-                );
-              })}
+              <SocialIcon 
+                url="https://instagram.com/wizneo" 
+                style={{ height: 48, width: 48 }}
+                className="hover:scale-110 transform transition-transform duration-300"
+              />
+              <SocialIcon 
+                url="https://youtube.com/wizneo" 
+                style={{ height: 48, width: 48 }}
+                className="hover:scale-110 transform transition-transform duration-300"
+              />
+              <SocialIcon 
+                url="https://x.com/wizneo" 
+                style={{ height: 48, width: 48 }}
+                className="hover:scale-110 transform transition-transform duration-300"
+              />
+              <SocialIcon 
+                url="https://tiktok.com/@wizneo" 
+                style={{ height: 48, width: 48 }}
+                className="hover:scale-110 transform transition-transform duration-300"
+              />
             </div>
             
             {/* Copyright */}
