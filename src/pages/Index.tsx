@@ -3,6 +3,7 @@ import React from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
+import { getIcon } from '@/utils/iconMapping';
 
 const Index = () => {
   const links = [
@@ -97,7 +98,7 @@ const Index = () => {
                 { icon: 'youtube', url: '#' },
                 { icon: 'x', url: '#' }
               ].map((social, index) => {
-                const IconComponent = require('@/utils/iconMapping').getIcon(social.icon);
+                const IconComponent = getIcon(social.icon);
                 return (
                   <a
                     key={index}
