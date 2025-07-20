@@ -7,22 +7,28 @@ import FloatingParticles from '@/components/FloatingParticles';
 const Index = () => {
   const links = [
     {
-      icon: "youtube",
-      title: "YouTube – Tutoriales IA",
-      description: "Aprende a como generar productos digitales sin ser un experto en programación",
-      url: "https://www.youtube.com/@wiz-neo"
+      icon: "brain",
+      title: "30 días para dominar la inteligencia artificial",
+      description: "Un plan gratuito y personalizado para emprendedores que no quieren quedarse atrás.",
+      url: "#"
     },
     {
-      icon: "instagram",
-      title: "Instagram – Herramientas IA",
-      description: "Consejos y tips para sacarle el mayor provecho a la inteligencia artificial",
-      url: "https://www.instagram.com/wizneo.io/"
+      icon: "tech",
+      title: "Explora mis sistemas inteligentes",
+      description: "Aprende a crear sistemas ganadores para tu negocio impulsados por inteligencia artificial",
+      url: "#"
     },
     {
-      icon: "tiktok",
-      title: "TikTok – Filosofía y espiritualidad consciente",
-      description: "Como es arriba es abajo, como es adentro es afuera.",
-      url: "https://www.tiktok.com/@wizneo.io"
+      icon: "phone",
+      title: "Agenda tu llamada gratuita",
+      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
+      url: "#"
+    },
+    {
+      icon: "agent",
+      title: "Únete a la comunidad Vibecoding",
+      description: "Una tribu de creadores que lanzan productos reales con IA sin saber programar.",
+      url: "#"
     }
   ];
 

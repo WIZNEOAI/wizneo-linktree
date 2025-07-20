@@ -8,14 +8,18 @@ import {
   Crown,
   Gem,
   Sparkles,
+  Brain,
+  Phone,
+  Cpu,
   LucideIcon
 } from 'lucide-react';
 
 // Mapeo de iconos por plataforma
 export const iconMap: Record<string, LucideIcon> = {
-  youtube: DollarSign,
-  instagram: Bot,
-  tiktok: Sparkles, // Representa transformación y energía espiritual
+  brain: Brain,
+  tech: Cpu,
+  phone: Phone,
+  agent: Bot,
   // Fallbacks adicionales
   default: Star,
   external: ExternalLink,
