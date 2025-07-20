@@ -11,6 +11,10 @@ import {
   Brain,
   Phone,
   Cpu,
+  Instagram,
+  Youtube,
+  X,
+  Music,
   LucideIcon
 } from 'lucide-react';
 
@@ -20,6 +24,11 @@ export const iconMap: Record<string, LucideIcon> = {
   tech: Cpu,
   phone: Phone,
   agent: Bot,
+  // Redes sociales
+  instagram: Instagram,
+  youtube: Youtube,
+  x: X,
+  tiktok: Music,
   // Fallbacks adicionales
   default: Star,
   external: ExternalLink,

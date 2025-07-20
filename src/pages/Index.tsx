@@ -88,8 +88,32 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Footer */}
-          <div className="text-center pt-6 sm:pt-8">
+          {/* Social Media Icons */}
+          <div className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
+            <div className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
+              {[
+                { icon: 'instagram', url: '#' },
+                { icon: 'tiktok', url: '#' },
+                { icon: 'youtube', url: '#' },
+                { icon: 'x', url: '#' }
+              ].map((social, index) => {
+                const IconComponent = require('@/utils/iconMapping').getIcon(social.icon);
+                return (
+                  <a
+                    key={index}
+                    href={social.url}
+                    className="w-12 h-12 sm:w-14 sm:h-14 flex items-center justify-center
+                             rounded-full matrix-border-glow hover:matrix-glow
+                             transition-all duration-300 transform hover:scale-110
+                             text-gray-400 hover:text-matrix-green"
+                  >
+                    <IconComponent size={24} className="sm:w-6 sm:h-6" />
+                  </a>
+                );
+              })}
+            </div>
+            
+            {/* Copyright */}
             <div className="text-xs sm:text-sm text-gray-500 font-matrix tracking-wide">
               © 2025 WIZNEO
             </div>
