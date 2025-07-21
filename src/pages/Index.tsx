@@ -95,22 +95,38 @@ const Index = () => {
               <SocialIcon 
                 url="https://instagram.com/wizneo" 
                 style={{ height: 48, width: 48 }}
-                className="hover:scale-110 transform transition-transform duration-300"
+                bgColor="#00FF41"
+                fgColor="#000000"
+                className="hover-matrix-glow cursor-pointer transition-all duration-300 
+                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
                 url="https://youtube.com/wizneo" 
                 style={{ height: 48, width: 48 }}
-                className="hover:scale-110 transform transition-transform duration-300"
+                bgColor="#00FF41"
+                fgColor="#000000"
+                className="hover-matrix-glow cursor-pointer transition-all duration-300 
+                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
                 url="https://x.com/wizneo" 
                 style={{ height: 48, width: 48 }}
-                className="hover:scale-110 transform transition-transform duration-300"
+                bgColor="#00FF41"
+                fgColor="#000000"
+                className="hover-matrix-glow cursor-pointer transition-all duration-300 
+                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
                 url="https://tiktok.com/@wizneo" 
                 style={{ height: 48, width: 48 }}
-                className="hover:scale-110 transform transition-transform duration-300"
+                bgColor="#00FF41"
+                fgColor="#000000"
+                className="hover-matrix-glow cursor-pointer transition-all duration-300 
+                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          rounded-full border border-matrix-green/30"
               />
             </div>
             
