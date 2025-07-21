@@ -27,7 +27,7 @@ const Index = () => {
     },
     {
       icon: "agent",
-      title: "Únete a la comunidad Vibecoding",
+      title: "Únete a la comunidad Vibecoder",
       description: "Una tribu de creadores que lanzan productos reales con IA sin saber programar.",
       url: "#"
     }
