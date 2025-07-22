@@ -23,7 +23,7 @@ const Index = () => {
       icon: "phone",
       title: "Agenda tu llamada gratuita",
       description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
-      url: "#"
+      url: "https://calendly.com/gnosixio/diagnostico-gratuito"
     },
     {
       icon: "agent",
@@ -93,7 +93,7 @@ const Index = () => {
           <div className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
             <div className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
               <SocialIcon 
-                url="https://instagram.com/wizneo" 
+                url="https://www.instagram.com/wizneo.io/" 
                 style={{ height: 48, width: 48 }}
                 bgColor="#00FF41"
                 fgColor="#000000"
@@ -102,7 +102,7 @@ const Index = () => {
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
-                url="https://youtube.com/wizneo" 
+                url="https://www.youtube.com/@wiz-neo" 
                 style={{ height: 48, width: 48 }}
                 bgColor="#00FF41"
                 fgColor="#000000"
@@ -111,7 +111,7 @@ const Index = () => {
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
-                url="https://x.com/wizneo" 
+                url="https://x.com/Wizneoio" 
                 style={{ height: 48, width: 48 }}
                 bgColor="#00FF41"
                 fgColor="#000000"
@@ -120,7 +120,7 @@ const Index = () => {
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
-                url="https://tiktok.com/@wizneo" 
+                url="https://www.tiktok.com/@wizneo.io" 
                 style={{ height: 48, width: 48 }}
                 bgColor="#00FF41"
                 fgColor="#000000"
