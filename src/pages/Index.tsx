@@ -51,7 +51,7 @@ const Index = () => {
                            rounded-full overflow-hidden matrix-border-glow hover:matrix-glow 
                            transition-all duration-300 transform hover:scale-105">
               <img 
-                src="/lovable-uploads/b1450d9f-9322-41fe-a4d5-07d8c6b9e0c8.png"
+                src="/lovable-uploads/6502f860-19e0-4508-ae43-31ee1cce3d60.png"
                 alt="WIZNEO Profile"
                 className="w-full h-full object-cover"
               />
