@@ -1,7 +1,7 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback, useMemo } from 'react';
 
-const MatrixRain = () => {
+const MatrixRain = React.memo(() => {
   const [characters, setCharacters] = useState<Array<{
     id: number;
     char: string;
@@ -10,9 +10,11 @@ const MatrixRain = () => {
     animationDuration: number;
   }>>([]);
 
-  useEffect(() => {
-    const matrixChars = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-    const generateCharacters = () => {
+  const matrixChars = useMemo(() => 
+    '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン', []
+  );
+
+  const generateCharacters = useCallback(() => {
       const chars = [];
       const numChars = window.innerWidth < 768 ? 30 : 50; // Fewer chars on mobile
       
@@ -26,7 +28,9 @@ const MatrixRain = () => {
         });
       }
       return chars;
-    };
+    }, [matrixChars]);
+
+  useEffect(() => {
 
     setCharacters(generateCharacters());
 
@@ -40,7 +44,7 @@ const MatrixRain = () => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [generateCharacters, matrixChars]);
 
   return (
     <div className="matrix-rain">
@@ -59,6 +63,8 @@ const MatrixRain = () => {
       ))}
     </div>
   );
-};
+});
+
+MatrixRain.displayName = 'MatrixRain';
 
 export default MatrixRain;

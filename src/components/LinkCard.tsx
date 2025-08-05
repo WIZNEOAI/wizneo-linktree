@@ -2,6 +2,7 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { getIcon } from '@/utils/iconMapping';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 interface LinkCardProps {
   icon: string;
@@ -11,11 +12,32 @@ interface LinkCardProps {
 }
 
 const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) => {
+  const { trackEvent } = useAnalytics();
+
   const handleClick = () => {
-    if (url.startsWith('http')) {
-      window.open(url, '_blank', 'noopener,noreferrer');
-    } else {
-      console.log(`Link clicked: ${url}`);
+    try {
+      // Track the click event
+      trackEvent({
+        action: 'click',
+        category: 'external_link',
+        label: title,
+        value: 1
+      });
+
+      if (url.startsWith('http')) {
+        window.open(url, '_blank', 'noopener,noreferrer');
+      } else {
+        console.log(`Link clicked: ${url}`);
+      }
+    } catch (error) {
+      console.error('Error opening link:', error);
+    }
+  };
+
+  const handleKeyDown = (event: React.KeyboardEvent) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      handleClick();
     }
   };
 
@@ -28,10 +50,15 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
   return (
     <div 
       onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
+      aria-label={`${title} - ${description}`}
       className="w-full p-4 sm:p-6 bg-black/80 backdrop-blur-sm border border-matrix-green/30 
                  rounded-lg hover-matrix-glow cursor-pointer transition-all duration-300 
                  hover:bg-matrix-green/5 group active:bg-matrix-green/10
-                 transform hover:translate-y-[-2px] active:translate-y-0"
+                 transform hover:translate-y-[-2px] active:translate-y-0
+                 focus:outline-none focus:ring-2 focus:ring-matrix-green focus:ring-opacity-50"
     >
       <div className="flex items-start space-x-3 sm:space-x-4">
         <div className="flex-shrink-0 group-hover:scale-110 

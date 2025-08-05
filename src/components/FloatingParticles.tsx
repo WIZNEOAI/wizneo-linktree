@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 interface Particle {
   id: number;
@@ -12,11 +12,10 @@ interface Particle {
   initialPosition: number;
 }
 
-const FloatingParticles = () => {
+const FloatingParticles = React.memo(() => {
   const [particles, setParticles] = useState<Particle[]>([]);
 
-  useEffect(() => {
-    const generateParticles = () => {
+  const generateParticles = useCallback(() => {
       // Menos partículas en móvil para mejor rendimiento
       const isMobile = window.innerWidth < 768;
       const numParticles = isMobile ? 15 : window.innerWidth < 1024 ? 25 : 35;
@@ -36,7 +35,9 @@ const FloatingParticles = () => {
       }
 
       setParticles(newParticles);
-    };
+    }, []);
+
+  useEffect(() => {
 
     generateParticles();
 
@@ -46,7 +47,7 @@ const FloatingParticles = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [generateParticles]);
 
   return (
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
@@ -70,6 +71,8 @@ const FloatingParticles = () => {
       ))}
     </div>
   );
-};
+});
+
+FloatingParticles.displayName = 'FloatingParticles';
 
 export default FloatingParticles;
