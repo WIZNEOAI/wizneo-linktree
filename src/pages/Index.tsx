@@ -1,11 +1,18 @@
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
 import { SocialIcon } from 'react-social-icons';
+import { useAnalytics } from '@/hooks/useAnalytics';
 
 const Index = () => {
+  const { trackPageView } = useAnalytics();
+
+  useEffect(() => {
+    trackPageView('Homepage');
+  }, [trackPageView]);
+
   const links = [
     {
       icon: "brain",
@@ -22,7 +29,7 @@ const Index = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black text-white font-matrix relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white font-matrix relative overflow-hidden" role="main">
       {/* Background Effects - Behind everything */}
       <MatrixRain />
       <FloatingParticles />
@@ -33,21 +40,23 @@ const Index = () => {
         <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto space-y-6 sm:space-y-8">
           
           {/* Profile Section */}
-          <div className="text-center space-y-4 sm:space-y-6">
+          <section className="text-center space-y-4 sm:space-y-6" aria-labelledby="profile-heading">
             {/* Profile Picture */}
             <div className="relative mx-auto w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 
                            rounded-full overflow-hidden matrix-border-glow hover:matrix-glow 
                            transition-all duration-300 transform hover:scale-105">
               <img 
                 src="/lovable-uploads/6502f860-19e0-4508-ae43-31ee1cce3d60.png"
-                alt="WIZNEO Profile"
+                alt="WIZNEO - Mentor en transformación personal y experto en inteligencia artificial"
                 className="w-full h-full object-cover"
+                loading="eager"
+                decoding="async"
               />
             </div>
             
             {/* Brand Name */}
             <div className="space-y-2 sm:space-y-3">
-              <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold 
+              <h1 id="profile-heading" className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold 
                             text-matrix-green matrix-text-glow font-matrix tracking-wider
                             transform transition-all duration-300 hover:scale-105">
                 WIZNEO
@@ -62,10 +71,10 @@ const Index = () => {
                           transition-colors duration-500 text-center">
               Transforma tu realidad, reprograma tu mente.
             </p>
-          </div>
+          </section>
 
           {/* Links Section */}
-          <div className="space-y-3 sm:space-y-4 w-full">
+          <section className="space-y-3 sm:space-y-4 w-full" aria-label="Enlaces principales">
             {links.map((link, index) => (
               <div 
                 key={index} 
@@ -75,11 +84,11 @@ const Index = () => {
                 <LinkCard {...link} />
               </div>
             ))}
-          </div>
+          </section>
 
           {/* Social Media Icons */}
-          <div className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8">
-            <div className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8">
+          <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8" aria-label="Redes sociales">
+            <nav className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8" aria-label="Enlaces de redes sociales">
               <SocialIcon 
                 url="https://www.instagram.com/wizneo.io/" 
                 style={{ height: 48, width: 48 }}
@@ -116,13 +125,13 @@ const Index = () => {
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
-            </div>
+            </nav>
             
             {/* Copyright */}
             <div className="text-xs sm:text-sm text-gray-500 font-matrix tracking-wide">
               © 2025 WIZNEO
             </div>
-          </div>
+          </section>
           
         </div>
       </div>
