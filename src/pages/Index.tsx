@@ -18,12 +18,6 @@ const Index = () => {
       title: "Explora mis sistemas inteligentes",
       description: "Aprende a crear sistemas ganadores para tu negocio impulsados por inteligencia artificial",
       url: "https://wizneo.gumroad.com/"
-    },
-    {
-      icon: "phone",
-      title: "Agenda tu llamada gratuita",
-      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
-      url: "https://calendly.com/gnosixio/diagnostico-gratuito"
     }
   ];
 
@@ -92,7 +86,7 @@ const Index = () => {
                 bgColor="#00FF41"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300 
-                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
@@ -101,7 +95,7 @@ const Index = () => {
                 bgColor="#00FF41"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300 
-                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
@@ -110,7 +104,7 @@ const Index = () => {
                 bgColor="#00FF41"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300 
-                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
               <SocialIcon 
@@ -119,7 +113,7 @@ const Index = () => {
                 bgColor="#00FF41"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300 
-                          transform hover:translate-y-[-2px] hover:scale-110 active:translate-y-0
+                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
             </div>
