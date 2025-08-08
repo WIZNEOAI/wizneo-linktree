@@ -25,6 +25,12 @@ const Index = () => {
       title: "Explora mis sistemas inteligentes",
       description: "Aprende a crear sistemas ganadores para tu negocio impulsados por inteligencia artificial",
       url: "https://wizneo.gumroad.com/"
+    },
+    {
+      icon: "phone",
+      title: "Agenda tu llamada gratuita",
+      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
+      url: "https://calendly.com/gnosixio/diagnostico-gratuito"
     }
   ];
 
