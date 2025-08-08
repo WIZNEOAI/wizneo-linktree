@@ -15,10 +15,10 @@ const Index = () => {
 
   const links = [
     {
-      icon: "brain",
-      title: "30 días para dominar la inteligencia artificial",
-      description: "Un plan gratuito y personalizado para emprendedores que no quieren quedarse atrás.",
-      url: "https://reto.wizneo.org/"
+      icon: "phone",
+      title: "Agenda tu llamada gratuita",
+      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
+      url: "https://calendly.com/gnosixio/automation"
     },
     {
       icon: "tech",
@@ -27,10 +27,10 @@ const Index = () => {
       url: "https://wizneo.gumroad.com/"
     },
     {
-      icon: "phone",
-      title: "Agenda tu llamada gratuita",
-      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
-      url: "https://calendly.com/gnosixio/automation"
+      icon: "brain",
+      title: "30 días para dominar la inteligencia artificial",
+      description: "Un plan gratuito y personalizado para emprendedores que no quieren quedarse atrás.",
+      url: "https://reto.wizneo.org/"
     }
   ];
 
