@@ -30,7 +30,7 @@ const Index = () => {
       icon: "phone",
       title: "Agenda tu llamada gratuita",
       description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
-      url: "https://calendly.com/gnosixio/diagnostico-gratuito"
+      url: "https://calendly.com/gnosixio/automation"
     }
   ];
 
