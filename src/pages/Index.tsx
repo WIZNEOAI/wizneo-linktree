@@ -52,7 +52,7 @@ const Index = () => {
                            rounded-full overflow-hidden matrix-border-glow hover:matrix-glow 
                            transition-all duration-300 transform hover:scale-105">
               <img 
-                src="/lovable-uploads/6502f860-19e0-4508-ae43-31ee1cce3d60.png"
+                src="/lovable-uploads/wizneo-profile.png"
                 alt="WIZNEO - Mentor en transformación personal y experto en inteligencia artificial"
                 className="w-full h-full object-cover"
                 loading="eager"
