@@ -131,6 +131,15 @@ const Index = () => {
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
+              <SocialIcon 
+                url="https://github.com/WIZNEOAI" 
+                style={{ height: 48, width: 48 }}
+                bgColor="#00FF41"
+                fgColor="#000000"
+                className="hover-matrix-glow cursor-pointer transition-all duration-300 
+                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
+                          rounded-full border border-matrix-green/30"
+              />
             </nav>
             
             {/* Copyright */}
