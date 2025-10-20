@@ -148,14 +148,14 @@ export default {
 						opacity: '0'
 					}
 				},
-				'pulse-green': {
-					'0%, 100%': {
-						opacity: '1'
-					},
-					'50%': {
-						opacity: '0.7'
-					}
+			'pulse-green': {
+				'0%, 100%': {
+					opacity: '1'
+				},
+				'50%': {
+					opacity: '0.92'
 				}
+			}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -163,7 +163,7 @@ export default {
 				'matrix-rain': 'matrix-rain 8s linear infinite',
 				'matrix-binary-fall': 'matrix-binary-fall linear infinite',
 				'matrix-fall': 'matrix-fall linear infinite',
-				'pulse-green': 'pulse-green 2s ease-in-out infinite'
+				'pulse-green': 'pulse-green 4s ease-in-out infinite'
 			}
 		}
 	},
