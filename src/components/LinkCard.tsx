@@ -9,9 +9,10 @@ interface LinkCardProps {
   title: string;
   description: string;
   url: string;
+  featured?: boolean;
 }
 
-const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, featured = false }) => {
   const { trackEvent } = useAnalytics();
 
   const handleClick = () => {
@@ -54,22 +55,28 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url }) =>
       role="button"
       tabIndex={0}
       aria-label={`${title} - ${description}`}
-      className="w-full p-4 sm:p-6 bg-black/80 backdrop-blur-sm border border-matrix-green/30 
-                 rounded-lg hover-matrix-glow cursor-pointer transition-all duration-300 
-                 hover:bg-matrix-green/5 group active:bg-matrix-green/10
-                 transform hover:translate-y-[-2px] active:translate-y-0
-                 focus:outline-none focus:ring-2 focus:ring-matrix-green focus:ring-opacity-50"
+      className={`w-full p-4 sm:p-6 backdrop-blur-sm border rounded-lg hover-matrix-glow cursor-pointer transition-all duration-300 
+                 group transform active:translate-y-0
+                 focus:outline-none focus:ring-2 focus:ring-matrix-green focus:ring-opacity-50
+                 ${featured 
+                   ? 'bg-matrix-green/10 border-matrix-green border-2 hover:bg-matrix-green/20 active:bg-matrix-green/25 hover:translate-y-[-4px] shadow-[0_0_30px_rgba(0,255,65,0.3)] hover:shadow-[0_0_40px_rgba(0,255,65,0.5)] animate-pulse-green' 
+                   : 'bg-black/80 border-matrix-green/30 hover:bg-matrix-green/5 active:bg-matrix-green/10 hover:translate-y-[-2px]'
+                 }`}
     >
       <div className="flex items-start space-x-3 sm:space-x-4">
-        <div className="flex-shrink-0 group-hover:scale-110 
-                       transition-transform duration-300 group-active:scale-105">
+        <div className={`flex-shrink-0 group-hover:scale-110 
+                       transition-transform duration-300 group-active:scale-105 
+                       ${featured ? 'scale-110' : ''}`}>
           {renderIcon()}
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center justify-between mb-1 sm:mb-2">
-            <h3 className="text-matrix-green font-matrix font-semibold 
-                          text-base sm:text-lg lg:text-xl group-hover:text-white 
-                          transition-colors duration-300 leading-tight">
+            <h3 className={`font-matrix font-semibold 
+                          transition-colors duration-300 leading-tight
+                          ${featured 
+                            ? 'text-matrix-green text-lg sm:text-xl lg:text-2xl group-hover:text-white drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]' 
+                            : 'text-matrix-green text-base sm:text-lg lg:text-xl group-hover:text-white'
+                          }`}>
               {title}
             </h3>
             <ExternalLink 

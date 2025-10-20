@@ -16,9 +16,10 @@ const Index = () => {
   const links = [
     {
       icon: "phone",
-      title: "Agenda tu llamada gratuita",
-      description: "Diagnóstico 1:1 para construir un sistema inteligente adaptado a tu negocio.",
-      url: "https://calendly.com/gnosixio/automation"
+      title: "Consultoría en Inteligencia Artificial",
+      description: "Sesión estratégica 1:1 personalizada para transformar tu negocio con IA.",
+      url: "https://calendly.com/gnosixio/wizneo",
+      featured: true
     },
     {
       icon: "tech",
@@ -84,8 +85,8 @@ const Index = () => {
             {links.map((link, index) => (
               <div 
                 key={index} 
-                className="transform transition-all duration-300 
-                          hover:scale-[1.02] active:scale-[0.98]"
+                className={`transform transition-all duration-300 
+                          ${link.featured ? 'hover:scale-[1.03] active:scale-[0.97]' : 'hover:scale-[1.02] active:scale-[0.98]'}`}
               >
                 <LinkCard {...link} />
               </div>
