@@ -59,11 +59,11 @@ Transforma tu realidad, reprograma tu mente.  →  Tu frase aquí
 
 ### 2. Cambia tu foto de perfil
 
-1. Coloca tu imagen en la carpeta `public/lovable-uploads/`
+1. Coloca tu imagen en la carpeta `public/assets/`
 2. Actualiza la ruta en `src/pages/Index.tsx` (línea 56):
 
 ```tsx
-<img src="/lovable-uploads/tu-imagen.png" alt="Tu Nombre" />
+<img src="/assets/tu-imagen.png" alt="Tu Nombre" />
 ```
 
 ### 3. Personaliza tus enlaces principales
