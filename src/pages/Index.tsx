@@ -15,17 +15,11 @@ const Index = () => {
 
   const links = [
     {
-      icon: "phone",
-      title: "Consultoría en Inteligencia Artificial",
-      description: "Sesión estratégica 1:1 personalizada para transformar tu negocio con IA.",
-      url: "https://calendly.com/gnosixio/wizneo",
-      featured: true
-    },
-    {
       icon: "tech",
       title: "Explora mis sistemas inteligentes",
       description: "Aprende a crear sistemas ganadores para tu negocio impulsados por inteligencia artificial",
-      url: "https://wizneo.gumroad.com/"
+      url: "https://wizneo.gumroad.com/",
+      featured: true
     },
     {
       icon: "brain",
