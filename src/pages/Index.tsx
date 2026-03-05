@@ -15,17 +15,17 @@ const Index = () => {
 
   const links = [
     {
-      icon: "tech",
-      title: "Explora mis sistemas inteligentes",
-      description: "Aprende a crear sistemas ganadores para tu negocio impulsados por inteligencia artificial",
-      url: "https://wizneo.gumroad.com/",
+      icon: "brain",
+      title: "Domina la IA en 2026",
+      description: "El plan para emprendedores que no quieren quedarse atrás.",
+      url: "https://reto.wizneo.org/",
       featured: true
     },
     {
-      icon: "brain",
-      title: "30 días para dominar la inteligencia artificial",
-      description: "Un plan gratuito y personalizado para emprendedores que no quieren quedarse atrás.",
-      url: "https://reto.wizneo.org/"
+      icon: "tech",
+      title: "Consultoría 1 a 1 conmigo",
+      description: "Agenda tu sesión express y resolvamos juntos.",
+      url: "https://cal.com/gnosixio/consultoria-express"
     }
   ];
 
@@ -139,7 +139,7 @@ const Index = () => {
             
             {/* Copyright */}
             <div className="text-xs sm:text-sm text-gray-500 font-matrix tracking-wide">
-              © 2025 WIZNEO
+              © 2026 WIZNEO
             </div>
           </section>
           
