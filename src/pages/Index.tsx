@@ -15,17 +15,23 @@ const Index = () => {
 
   const links = [
     {
-      icon: "brain",
-      title: "Domina la IA en 2026",
-      description: "El plan para emprendedores que no quieren quedarse atrás.",
-      url: "https://reto.wizneo.org/",
-      featured: true
-    },
-    {
       icon: "tech",
       title: "Consultoría 1 a 1 conmigo",
       description: "Agenda tu sesión express y resolvamos juntos.",
-      url: "https://cal.com/gnosixio/consultoria-express"
+      url: "https://cal.com/gnosixio/consultoria-express",
+      featured: true
+    },
+    {
+      icon: "store",
+      title: "Recursos y Herramientas IA",
+      description: "Explora guías, plantillas y sistemas listos para implementar.",
+      url: "https://wizneo.gumroad.com/?_gl=1*1eejopj*_ga*OTc5NzY1MTgxLjE3NzQxMzI3Mjk.*_ga_6LJN6D94N6*czE3NzQxMzI3MjgkbzEkZzEkdDE3NzQxMzI3MzMkajU1JGwwJGgw."
+    },
+    {
+      icon: "brain",
+      title: "Domina la IA en 2026",
+      description: "El plan para emprendedores que no quieren quedarse atrás.",
+      url: "https://reto.wizneo.org/"
     }
   ];
 

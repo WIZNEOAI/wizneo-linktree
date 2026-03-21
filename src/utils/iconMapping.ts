@@ -1,8 +1,8 @@
 
-import { 
-  ExternalLink, 
-  DollarSign, 
-  Bot, 
+import {
+  ExternalLink,
+  DollarSign,
+  Bot,
   Zap,
   Star,
   Crown,
@@ -15,6 +15,7 @@ import {
   Youtube,
   X,
   Music,
+  ShoppingBag,
   LucideIcon
 } from 'lucide-react';
 
@@ -24,6 +25,7 @@ export const iconMap: Record<string, LucideIcon> = {
   tech: Cpu,
   phone: Phone,
   agent: Bot,
+  store: ShoppingBag,
   // Redes sociales
   instagram: Instagram,
   youtube: Youtube,
