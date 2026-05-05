@@ -15,23 +15,23 @@ const Index = () => {
 
   const links = [
     {
-      icon: "tech",
-      title: "Consultoría 1 a 1 conmigo",
-      description: "Agenda tu sesión express y resolvamos juntos.",
-      url: "https://cal.com/gnosixio/consultoria-express",
+      icon: "brain",
+      title: "Plan de IA 2026 (gratis)",
+      description: "Tu ruta personalizada para entrar al mundo IA en 2 minutos.",
+      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio",
       featured: true
     },
     {
-      icon: "store",
-      title: "Recursos y Herramientas IA",
-      description: "Explora guías, plantillas y sistemas listos para implementar.",
-      url: "https://wizneo.gumroad.com/?_gl=1*1eejopj*_ga*OTc5NzY1MTgxLjE3NzQxMzI3Mjk.*_ga_6LJN6D94N6*czE3NzQxMzI3MjgkbzEkZzEkdDE3NzQxMzI3MzMkajU1JGwwJGgw."
+      icon: "tech",
+      title: "Consultoría Express 1-a-1 — 500 USD",
+      description: "2 horas conmigo. Salís con un plan ejecutable.",
+      url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree"
     },
     {
-      icon: "brain",
-      title: "Domina la IA en 2026",
-      description: "El plan para emprendedores que no quieren quedarse atrás.",
-      url: "https://reto.wizneo.org/"
+      icon: "store",
+      title: "Recursos y plantillas IA",
+      description: "Sistemas y frameworks listos para implementar.",
+      url: "https://wizneo.gumroad.com/"
     }
   ];
 
@@ -54,7 +54,7 @@ const Index = () => {
                            transition-all duration-300 transform hover:scale-105">
               <img 
                 src="/uploads/wizneo-profile.png"
-                alt="WIZNEO - Mentor en transformación personal y experto en inteligencia artificial"
+                alt="WIZNEO — Educación práctica de IA para el nuevo mundo"
                 className="w-full h-full object-cover"
                 loading="eager"
                 decoding="async"
@@ -76,7 +76,7 @@ const Index = () => {
             <p className="text-base sm:text-lg lg:text-xl text-gray-300 font-matrix 
                           leading-relaxed px-2 sm:px-4 lg:px-6 hover:text-matrix-green 
                           transition-colors duration-500 text-center">
-              Transforma tu realidad, reprograma tu mente.
+              Te preparo para el nuevo mundo de la IA.
             </p>
           </section>
 
@@ -105,17 +105,8 @@ const Index = () => {
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
                           rounded-full border border-matrix-green/30"
               />
-              <SocialIcon 
-                url="https://www.youtube.com/@wiz-neo" 
-                style={{ height: 48, width: 48 }}
-                bgColor="#00FF41"
-                fgColor="#000000"
-                className="hover-matrix-glow cursor-pointer transition-all duration-300 
-                          transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
-                          rounded-full border border-matrix-green/30"
-              />
-              <SocialIcon 
-                url="https://x.com/Wizneoio" 
+              <SocialIcon
+                url="https://x.com/Wizneoio"
                 style={{ height: 48, width: 48 }}
                 bgColor="#00FF41"
                 fgColor="#000000"
