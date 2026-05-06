@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
+import NewsletterCapture from '@/components/NewsletterCapture';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
@@ -28,10 +29,10 @@ const Index = () => {
       url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree"
     },
     {
-      icon: "store",
-      title: "Recursos y plantillas IA",
-      description: "Sistemas y frameworks listos para implementar.",
-      url: "https://wizneo.gumroad.com/"
+      icon: "newsletter",
+      title: "Newsletter WIZNEO",
+      description: "Resumen IA semanal en español. Cada lunes.",
+      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
     }
   ];
 
@@ -83,15 +84,18 @@ const Index = () => {
           {/* Links Section */}
           <section className="space-y-3 sm:space-y-4 w-full" aria-label="Enlaces principales">
             {links.map((link, index) => (
-              <div 
-                key={index} 
-                className={`transform transition-all duration-300 
+              <div
+                key={index}
+                className={`transform transition-all duration-300
                           ${link.featured ? 'hover:scale-[1.03] active:scale-[0.97]' : 'hover:scale-[1.02] active:scale-[0.98]'}`}
               >
                 <LinkCard {...link} />
               </div>
             ))}
           </section>
+
+          {/* Newsletter Inline Capture */}
+          <NewsletterCapture />
 
           {/* Social Media Icons */}
           <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8" aria-label="Redes sociales">
