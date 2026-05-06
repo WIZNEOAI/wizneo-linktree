@@ -27,12 +27,6 @@ const Index = () => {
       title: "Consultoría Express 1-a-1 — 500 USD",
       description: "2 horas conmigo. Salís con un plan ejecutable.",
       url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree"
-    },
-    {
-      icon: "newsletter",
-      title: "Newsletter WIZNEO",
-      description: "Resumen IA semanal en español. Cada lunes.",
-      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
     }
   ];
 
