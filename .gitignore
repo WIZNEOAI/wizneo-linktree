@@ -13,6 +13,9 @@ dist-ssr
 *.local
 .wizneo/reports/
 
+# Local git worktrees (executor pipeline)
+.worktrees/
+
 # Environment / secrets
 .env
 .env.*
