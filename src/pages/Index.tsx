@@ -56,23 +56,29 @@ const Index = () => {
               />
             </div>
             
-            {/* Brand Name */}
-            <div className="space-y-2 sm:space-y-3">
-              <h1 id="profile-heading" className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold 
-                            text-matrix-green matrix-text-glow font-matrix tracking-wider
-                            transform transition-all duration-300 hover:scale-105">
-                WIZNEO
-              </h1>
-              <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r 
-                             from-transparent via-matrix-green to-transparent"></div>
-            </div>
-            
-            {/* Tagline */}
-            <p className="text-base sm:text-lg lg:text-xl text-gray-300 font-matrix 
-                          leading-relaxed px-2 sm:px-4 lg:px-6 hover:text-matrix-green 
-                          transition-colors duration-500 text-center">
-              Te preparo para el nuevo mundo de la IA.
+            {/* Brand label (microcopy) */}
+            <p className="text-xs sm:text-sm font-matrix tracking-[0.3em] uppercase text-matrix-green/70">
+              WIZNEO · Ulises Arellano
             </p>
+
+            {/* Tagline as primary heading */}
+            <div className="space-y-3 sm:space-y-4">
+              <h1
+                id="profile-heading"
+                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold
+                           text-matrix-green matrix-text-glow font-matrix tracking-tight
+                           leading-[1.05] px-2 sm:px-4 lg:px-6
+                           transform transition-all duration-300 hover:scale-[1.02]"
+              >
+                Te preparo para el nuevo mundo de la IA.
+              </h1>
+              <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r
+                             from-transparent via-matrix-green to-transparent"></div>
+              <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
+                            leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
+                Educación práctica de IA — sin jerga, sin teoría, sin perder meses.
+              </p>
+            </div>
           </section>
 
           {/* Links Section */}
