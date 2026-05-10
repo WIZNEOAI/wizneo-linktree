@@ -1,0 +1,42 @@
+# WIZNEO
+
+> WIZNEO es la marca personal de Ulises Arellano — AI engineer mexicano
+> radicado en CDMX. Misión: transformar tu realidad reprogramando tu
+> mente vía dominio de AI tools, transformación personal y filosofía
+> consciente. Contenido educativo, community y mentoría 1-a-1 para solo
+> founders, devs y creators LATAM.
+
+## Para quién
+- Solo founders y devs hispanohablantes (LATAM principal, Spain también)
+- Quien quiere dominar AI tools (Claude Code, Cursor, n8n, agents) sin guru-speak
+- Creators buscando mental models alrededor de AI craftsmanship + transformación personal
+
+## Qué hay disponible
+- Reto WIZNEO — 30 días gratuitos para dominar IA: https://reto.wizneo.org
+- Consultoría 1-a-1 express: https://cal.com/gnosixio/consultoria-express
+- Newsletter (próximamente): https://newsletter.wizneo.org
+
+## Creador
+- Ulises Arellano — AI Engineer, creador WIZNEO
+- Radicado en Ciudad de México
+- Instagram: https://instagram.com/wizneo.io
+- YouTube: https://youtube.com/@wiz-neo
+- TikTok: https://tiktok.com/@wizneo.io
+- X: https://x.com/Wizneoio
+
+## Voz y tono
+- Primera persona, español mexicano
+- Builder y anti-guru — concreto sobre abstracto
+- Sin hype, sin urgencia falsa, sin "trust me bro"
+
+## URLs principales
+- Home: https://wizneo.org (también https://www.wizneo.org)
+- Reto IA 30 días: https://reto.wizneo.org
+
+## No es para
+- Quien busca fórmulas de "ingresos pasivos" en 7 días
+- Motivación sin ejecución
+- Hardcore B2B enterprise (eso vive en otro lado)
+
+## Contacto
+- contacto@wizneo.org
