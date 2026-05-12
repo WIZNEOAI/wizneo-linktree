@@ -2,7 +2,7 @@
 User-agent: *
 Allow: /
 
-# Explicit allow for AI search crawlers (2026 list)
+# Explicit allow for AI search crawlers (2026-05 list)
 User-agent: GPTBot
 Allow: /
 
@@ -37,6 +37,28 @@ User-agent: cohere-ai
 Allow: /
 
 User-agent: meta-externalagent
+Allow: /
+
+# Additional AI crawlers added 2026-05-12
+User-agent: Bytespider
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+User-agent: webzio-extended
 Allow: /
 
 # Sitemap location
