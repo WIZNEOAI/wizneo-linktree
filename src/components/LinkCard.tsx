@@ -16,30 +16,12 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
   const { trackEvent } = useAnalytics();
 
   const handleClick = () => {
-    try {
-      // Track the click event
-      trackEvent({
-        action: 'click',
-        category: 'external_link',
-        label: title,
-        value: 1
-      });
-
-      if (url.startsWith('http')) {
-        window.open(url, '_blank', 'noopener,noreferrer');
-      } else {
-        console.log(`Link clicked: ${url}`);
-      }
-    } catch (error) {
-      console.error('Error opening link:', error);
-    }
-  };
-
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'Enter' || event.key === ' ') {
-      event.preventDefault();
-      handleClick();
-    }
+    trackEvent({
+      action: 'click',
+      category: 'external_link',
+      label: title,
+      value: 1
+    });
   };
 
   // Función para renderizar el icono usando el nuevo sistema
@@ -49,15 +31,16 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
   };
 
   return (
-    <div 
+    <a
+      href={url}
+      target={url.startsWith('http') ? '_blank' : undefined}
+      rel={url.startsWith('http') ? 'noopener noreferrer' : undefined}
       onClick={handleClick}
-      onKeyDown={handleKeyDown}
-      role="button"
-      tabIndex={0}
       aria-label={`${title} - ${description}`}
       className={`w-full p-4 sm:p-6 backdrop-blur-sm border rounded-lg hover-matrix-glow cursor-pointer transition-all duration-300 
                  group transform active:translate-y-0
                  focus:outline-none focus:ring-2 focus:ring-matrix-green focus:ring-opacity-50
+                 block no-underline
                  ${featured 
                    ? 'bg-matrix-green/10 border-matrix-green border-2 hover:bg-matrix-green/20 active:bg-matrix-green/25 hover:translate-y-[-4px] shadow-[0_0_30px_rgba(0,255,65,0.3)] hover:shadow-[0_0_40px_rgba(0,255,65,0.5)]' 
                    : 'bg-black/80 border-matrix-green/30 hover:bg-matrix-green/5 active:bg-matrix-green/10 hover:translate-y-[-2px]'
@@ -92,7 +75,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
           </p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
