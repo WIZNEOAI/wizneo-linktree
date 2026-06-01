@@ -2,5 +2,5 @@
 export {};
 
 declare global {
-  function gtag(...args: any[]): void;
+  function gtag(...args: unknown[]): void;
 }

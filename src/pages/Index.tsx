@@ -16,17 +16,29 @@ const Index = () => {
 
   const links = [
     {
-      icon: "brain",
-      title: "Plan de IA 2026 (gratis)",
-      description: "Tu ruta personalizada para entrar al mundo IA en 2 minutos.",
-      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio",
+      icon: "agent",
+      title: "WIZNEO AI Builder Sprint — 500 USD",
+      description: "2 horas 1:1 para montar agentes, terminal, VPS, repos y tu workflow builder.",
+      url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=organic&utm_campaign=wizneo_ai_builder_sprint",
       featured: true
     },
     {
+      icon: "brain",
+      title: "Plan de IA 2026 (gratis)",
+      description: "Tu ruta personalizada para entrar al mundo IA en 2 minutos.",
+      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet"
+    },
+    {
+      icon: "newsletter",
+      title: "Newsletter WIZNEO",
+      description: "Cada lunes: lo importante de IA, sin humo y con una acción concreta.",
+      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
+    },
+    {
       icon: "tech",
-      title: "Consultoría Express 1-a-1 — 500 USD",
-      description: "2 horas conmigo. Salís con un plan ejecutable.",
-      url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree"
+      title: "Ya estás listo para agendar",
+      description: "Si ya sabes que quieres sesión, ve directo a Cal.com.",
+      url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree&utm_medium=hot_lead&utm_campaign=wizneo_ai_builder_sprint"
     }
   ];
 
