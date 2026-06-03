@@ -33,12 +33,6 @@ const Index = () => {
       title: "Newsletter WIZNEO",
       description: "Cada lunes: lo importante de IA, sin humo y con una acción concreta.",
       url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
-    },
-    {
-      icon: "tech",
-      title: "Ya estás listo para agendar",
-      description: "Si ya sabes que quieres sesión, ve directo a Cal.com.",
-      url: "https://cal.com/gnosixio/consultoria-express?utm_source=linktree&utm_medium=hot_lead&utm_campaign=wizneo_ai_builder_sprint"
     }
   ];
 
