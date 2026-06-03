@@ -19,7 +19,7 @@ const Index = () => {
       icon: "agent",
       title: "WIZNEO AI Builder Sprint — 500 USD",
       description: "2 horas 1:1 para montar agentes, terminal, VPS, repos y tu workflow builder.",
-      url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=organic&utm_campaign=wizneo_ai_builder_sprint",
+      url: "https://consultoria.wizneo.org/?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
       featured: true
     },
     {
