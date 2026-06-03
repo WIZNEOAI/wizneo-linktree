@@ -34,13 +34,9 @@ export const useAnalytics = () => {
 
   const trackPageView = useCallback((pageName: string) => {
     try {
-      if (typeof gtag !== 'undefined') {
-        gtag('config', 'GA_MEASUREMENT_ID', {
-          page_title: pageName,
-          page_location: window.location.href,
-        });
-      }
-
+      // gtag('config', 'GA_MEASUREMENT_ID', ...) intentionally removed —
+      // placeholder ID would send bogus hits. Page-view tracking is handled
+      // by the Vercel Analytics <Analytics /> component rendered in App.tsx.
       if (process.env.NODE_ENV === 'development') {
         console.log('Page View:', pageName);
       }
