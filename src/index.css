@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;600;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -88,7 +88,7 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Source Code Pro', 'Courier New', monospace;
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
@@ -177,7 +177,7 @@
 .matrix-char {
   position: absolute;
   color: var(--matrix-green);
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'JetBrains Mono', monospace;
   animation: matrixRain 8s linear infinite;
   text-shadow: 0 0 5px var(--matrix-green);
   will-change: transform;

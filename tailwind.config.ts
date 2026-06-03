@@ -21,7 +21,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				'matrix': ['Source Code Pro', 'Courier New', 'monospace'],
+				'matrix': ['JetBrains Mono', 'Courier New', 'monospace'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
