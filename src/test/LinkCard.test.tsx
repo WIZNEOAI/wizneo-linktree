@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
+import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom/vitest';
 import LinkCard from '@/components/LinkCard';
 
@@ -10,10 +10,6 @@ vi.mock('@/hooks/useAnalytics', () => ({
   }),
 }));
 
-// Mock window.open
-const mockOpen = vi.fn();
-Object.defineProperty(window, 'open', { value: mockOpen });
-
 describe('LinkCard', () => {
   const defaultProps = {
     icon: 'brain',
@@ -22,48 +18,43 @@ describe('LinkCard', () => {
     url: 'https://example.com',
   };
 
-  beforeEach(() => {
-    mockOpen.mockClear();
-  });
-
   it('renders correctly', () => {
     render(<LinkCard {...defaultProps} />);
-    
+
     expect(screen.getByText('Test Title')).toBeInTheDocument();
     expect(screen.getByText('Test Description')).toBeInTheDocument();
   });
 
-  it('opens external link when clicked', () => {
+  it('renders a real external anchor', () => {
     render(<LinkCard {...defaultProps} />);
-    
-    const linkElement = screen.getByRole('button');
-    fireEvent.click(linkElement);
-    
-    expect(mockOpen).toHaveBeenCalledWith(
-      'https://example.com',
-      '_blank',
-      'noopener,noreferrer'
-    );
+
+    const linkElement = screen.getByRole('link', {
+      name: 'Test Title - Test Description',
+    });
+
+    expect(linkElement).toHaveAttribute('href', 'https://example.com');
+    expect(linkElement).toHaveAttribute('target', '_blank');
+    expect(linkElement).toHaveAttribute('rel', 'noopener noreferrer');
   });
 
-  it('handles keyboard navigation', () => {
+  it('is keyboard focusable through the native link element', () => {
     render(<LinkCard {...defaultProps} />);
-    
-    const linkElement = screen.getByRole('button');
-    fireEvent.keyDown(linkElement, { key: 'Enter' });
-    
-    expect(mockOpen).toHaveBeenCalledWith(
-      'https://example.com',
-      '_blank',
-      'noopener,noreferrer'
-    );
+
+    const linkElement = screen.getByRole('link', {
+      name: 'Test Title - Test Description',
+    });
+
+    linkElement.focus();
+    expect(linkElement).toHaveFocus();
   });
 
   it('has proper accessibility attributes', () => {
     render(<LinkCard {...defaultProps} />);
-    
-    const linkElement = screen.getByRole('button');
+
+    const linkElement = screen.getByRole('link', {
+      name: 'Test Title - Test Description',
+    });
+
     expect(linkElement).toHaveAttribute('aria-label', 'Test Title - Test Description');
-    expect(linkElement).toHaveAttribute('tabIndex', '0');
   });
 });

@@ -176,7 +176,7 @@ warm leads via formulario en linktree.
 de:
 
 - **Gnosix** (https://gnosix.io) — B2B AI Company, consulting +
-  agentic systems para clínicas y empresas LATAM
+  agentic systems para empresas LATAM
 - **WIZNEO** (https://wizneo.org) — marca personal, contenido
   educativo, mentoría
 - **Depadoc** (https://depadoc.com) — Medical SaaS, AI clínico

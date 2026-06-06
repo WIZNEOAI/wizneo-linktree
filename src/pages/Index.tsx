@@ -17,9 +17,9 @@ const Index = () => {
   const links = [
     {
       icon: "agent",
-      title: "WIZNEO AI Builder Sprint — 500 USD",
-      description: "2 horas 1:1 para montar agentes, terminal, VPS, repos y tu workflow builder.",
-      url: "https://consultoria.wizneo.org/?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
+      title: "AI Builder Sprint con Ulises — 500 USD",
+      description: "2 horas 1:1 para montar tu AI Builder OS: agentes, terminal, repos, Claude Code/Codex/Cursor y operación desde tu cel. Ventana founder limitada.",
+      url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
       featured: true
     },
     {
@@ -76,13 +76,13 @@ const Index = () => {
                            leading-[1.05] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Te preparo para el nuevo mundo de la IA.
+                Construye con IA. Sin excusas.
               </h1>
               <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Educación práctica de IA — sin jerga, sin teoría, sin perder meses.
+                Educación práctica de IA — contenido, Sprint founder y sistemas reales para builders.
               </p>
             </div>
           </section>
