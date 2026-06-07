@@ -43,17 +43,17 @@ const Index = () => {
       <FloatingParticles />
       
       {/* Main Content - Above background effects */}
-      <div className="relative z-20 min-h-screen flex flex-col items-center justify-center 
-                      px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
-        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto space-y-6 sm:space-y-8">
-          
+      <div className="relative z-20 min-h-[100dvh] flex flex-col items-center justify-start sm:justify-center
+                      px-4 sm:px-6 lg:px-8 pt-8 pb-6 sm:py-10">
+        <div className="w-full max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl mx-auto space-y-4 sm:space-y-5">
+
           {/* Profile Section */}
-          <section className="text-center space-y-4 sm:space-y-6" aria-labelledby="profile-heading">
+          <section className="text-center space-y-3 sm:space-y-4" aria-labelledby="profile-heading">
             {/* Profile Picture */}
-            <div className="relative mx-auto w-24 h-24 sm:w-32 sm:h-32 lg:w-36 lg:h-36 
-                           rounded-full overflow-hidden matrix-border-glow hover:matrix-glow 
+            <div className="relative mx-auto w-20 h-20 sm:w-24 sm:h-24 lg:w-28 lg:h-28
+                           rounded-full overflow-hidden matrix-border-glow hover:matrix-glow
                            transition-all duration-300 transform hover:scale-105">
-              <img 
+              <img
                 src="/uploads/wizneo-profile.png"
                 alt="WIZNEO — Educación práctica de IA para el nuevo mundo"
                 className="w-full h-full object-cover"
@@ -68,17 +68,17 @@ const Index = () => {
             </p>
 
             {/* Tagline as primary heading */}
-            <div className="space-y-3 sm:space-y-4">
+            <div className="space-y-2 sm:space-y-3">
               <h1
                 id="profile-heading"
-                className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold
+                className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold
                            text-matrix-green matrix-text-glow font-matrix tracking-tight
-                           leading-[1.05] px-2 sm:px-4 lg:px-6
+                           leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
                 Construye con IA. Sin excusas.
               </h1>
-              <div className="h-px w-16 sm:w-24 lg:w-32 mx-auto bg-gradient-to-r
+              <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
@@ -104,7 +104,7 @@ const Index = () => {
           <NewsletterCapture />
 
           {/* Social Media Icons */}
-          <section className="text-center pt-8 sm:pt-12 pb-6 sm:pb-8" aria-label="Redes sociales">
+          <section className="text-center pt-5 sm:pt-6 pb-4 sm:pb-5" aria-label="Redes sociales">
             <nav className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8" aria-label="Enlaces de redes sociales">
               <SocialIcon 
                 url="https://www.instagram.com/wizneo.io/" 

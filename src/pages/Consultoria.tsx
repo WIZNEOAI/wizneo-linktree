@@ -24,7 +24,7 @@ const Consultoria = () => {
     'Decisión entre Claude, Cursor, n8n, Supabase y treinta tools más sin saber cuál mover primero.',
     'Pipeline manual que te come 10+ horas semanales y no sabés por dónde empezar a automatizar.',
     'Agente custom (Pi, LangChain, AI SDK) que probaste pero no escala más allá del demo.',
-    'Stack listo pero sin plan de implementación a 90 días con orden de impacto/esfuerzo.',
+    'Stack listo pero sin orden práctico para saber qué construir primero y cómo medir avance.',
     'Producto SaaS con IA donde no sabés si tu arquitectura aguanta la próxima fase.',
   ];
 

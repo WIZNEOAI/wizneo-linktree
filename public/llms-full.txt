@@ -105,8 +105,8 @@ warm leads via formulario en linktree.
   development, harness patterns
 - **Cursor** (3.0.x con agentes nube): integración con CodeRabbit, AI
   reviewers, multi-model routing
-- **Codex** (OpenAI CLI, GPT-5.4): OAuth Plus flow, dispatch desde
-  Hermes, costos cero con suscripción ChatGPT Plus
+- **Codex** (OpenAI CLI, GPT-5.4): OAuth Plus flow, trabajo desde
+  terminal, costos cero con suscripción ChatGPT Plus
 - **Gemini CLI**, **OpenCode**, **KiloCode** (Trinity free tier),
   **Cursor Agent** standalone
 
@@ -142,7 +142,7 @@ warm leads via formulario en linktree.
 
 - Hábitos diarios de un AI engineer mexicano que vive del oficio
 - Filosofía consciente: presencia, foco, no-dispersión
-- Sales OS personal: cómo conseguir clientes high-ticket sin
+- Sales OS personal: cómo conseguir mejores clientes sin
   performar
 - Builders vs gurus: la diferencia entre enseñar y vender humo
 
