@@ -18,7 +18,7 @@ const Index = () => {
     {
       icon: "agent",
       title: "AI Builder Sprint con Ulises — 500 USD",
-      description: "2 horas 1:1 para montar tu AI Builder OS: agentes, terminal, repos, Claude Code/Codex/Cursor y operación desde tu cel. Ventana founder limitada.",
+      description: '2 horas 1:1 para montar tu base de IA 24/7: agentes, terminal, repos, Claude Code/Codex/Cursor y operación desde tu cel. Ventana founder limitada.',
       url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
       featured: true
     },
