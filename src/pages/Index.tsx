@@ -16,8 +16,8 @@ const Index = () => {
   const links = [
     {
       icon: "agent",
-      title: "WIZNEO AI Builder Sprint — founder $500",
-      description: 'Valor $1,500. En 2 horas con Ulises montas tu base de IA: compu + cel, agentes/herramientas, contexto, repos/terminal y primer flujo real.',
+      title: "WIZNEO AI Builder Sprint — founder USD 500",
+      description: 'Valor USD 1,500. En 2 horas con Ulises montas tu base de IA: compu + cel, agentes/herramientas, contexto, repos/terminal y primer flujo real.',
       url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
       featured: true
     },
