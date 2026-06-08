@@ -42,7 +42,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
                  focus:outline-none focus:ring-2 focus:ring-matrix-green focus:ring-opacity-50
                  block no-underline
                  ${featured 
-                   ? 'bg-matrix-green/10 border-matrix-green border-2 hover:bg-matrix-green/20 active:bg-matrix-green/25 hover:translate-y-[-4px] shadow-[0_0_30px_rgba(0,255,65,0.3)] hover:shadow-[0_0_40px_rgba(0,255,65,0.5)]' 
+                   ? 'bg-matrix-green/10 border-matrix-green border-2 hover:bg-matrix-green/20 active:bg-matrix-green/25 hover:translate-y-[-4px] shadow-[0_0_30px_rgba(0,255,136,0.3)] hover:shadow-[0_0_40px_rgba(0,255,136,0.5)]'
                    : 'bg-black/80 border-matrix-green/30 hover:bg-matrix-green/5 active:bg-matrix-green/10 hover:translate-y-[-2px]'
                  }`}
     >
@@ -57,7 +57,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
             <h3 className={`font-matrix font-semibold 
                           transition-colors duration-300 leading-tight
                           ${featured 
-                            ? 'text-matrix-green text-lg sm:text-xl lg:text-2xl group-hover:text-white drop-shadow-[0_0_8px_rgba(0,255,65,0.8)]' 
+                            ? 'text-matrix-green text-lg sm:text-xl lg:text-2xl group-hover:text-white drop-shadow-[0_0_8px_rgba(0,255,136,0.8)]'
                             : 'text-matrix-green text-base sm:text-lg lg:text-xl group-hover:text-white'
                           }`}>
               {title}

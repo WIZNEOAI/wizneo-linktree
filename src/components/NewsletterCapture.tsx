@@ -132,7 +132,7 @@ const NewsletterCapture = () => {
               className="rounded-lg bg-matrix-green text-black font-bold font-matrix
                          px-5 py-3 text-sm sm:text-base tracking-wide
                          transition-all duration-200
-                         hover:bg-matrix-green/90 hover:shadow-[0_0_20px_rgba(0,255,65,0.4)]
+                         hover:bg-matrix-green/90 hover:shadow-[0_0_20px_rgba(0,255,136,0.4)]
                          active:scale-[0.98]
                          disabled:opacity-50 disabled:cursor-not-allowed
                          flex items-center justify-center gap-2 min-w-[140px]"

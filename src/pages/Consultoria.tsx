@@ -312,28 +312,28 @@ const Consultoria = () => {
               <SocialIcon
                 url="https://www.instagram.com/wizneo.io/"
                 style={{ height: 40, width: 40 }}
-                bgColor="#00FF41"
+                bgColor="#00FF88"
                 fgColor="#000000"
                 className="rounded-full border border-matrix-green/30"
               />
               <SocialIcon
                 url="https://x.com/Wizneoio"
                 style={{ height: 40, width: 40 }}
-                bgColor="#00FF41"
+                bgColor="#00FF88"
                 fgColor="#000000"
                 className="rounded-full border border-matrix-green/30"
               />
               <SocialIcon
                 url="https://www.tiktok.com/@wizneo.io"
                 style={{ height: 40, width: 40 }}
-                bgColor="#00FF41"
+                bgColor="#00FF88"
                 fgColor="#000000"
                 className="rounded-full border border-matrix-green/30"
               />
               <SocialIcon
                 url="https://github.com/WIZNEOAI"
                 style={{ height: 40, width: 40 }}
-                bgColor="#00FF41"
+                bgColor="#00FF88"
                 fgColor="#000000"
                 className="rounded-full border border-matrix-green/30"
               />

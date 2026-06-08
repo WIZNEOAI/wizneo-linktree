@@ -68,7 +68,7 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				matrix: {
-					green: '#00FF41',
+					green: '#00FF88',
 					dark: '#008F11',
 				}
 			},

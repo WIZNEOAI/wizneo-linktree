@@ -40,12 +40,12 @@ const ConsultoriaRedirect = () => {
   return (
     <div className="min-h-screen bg-black text-white font-matrix flex items-center justify-center px-4">
       <p className="text-center">
-        Redirecting to AI Builder Sprint...{" "}
+        Redirigiendo al AI Builder Sprint...{" "}
         <a
           href={CONSULTORIA_RETIRE_REDIRECT}
           className="text-matrix-green underline underline-offset-2"
         >
-          Continue here
+          Sigue aquí
         </a>
       </p>
     </div>

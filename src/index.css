@@ -46,7 +46,7 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    --matrix-green: #00FF41;
+    --matrix-green: #00FF88;
     --dark-green: #008F11;
   }
 
@@ -97,8 +97,8 @@
   @media (hover: none) and (pointer: coarse) {
     .hover-matrix-glow:hover {
       box-shadow: 
-        0 0 20px rgba(0, 255, 65, 0.4),
-        inset 0 0 8px rgba(0, 255, 65, 0.15);
+        0 0 20px rgba(0, 255, 136, 0.4),
+        inset 0 0 8px rgba(0, 255, 136, 0.15);
       transform: translateY(-1px);
     }
   }
@@ -212,7 +212,7 @@
 
 /* Glow effects - Optimizados para rendimiento */
 .matrix-glow {
-  box-shadow: 0 0 20px rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3);
   transition: box-shadow 0.3s ease;
 }
 
@@ -224,7 +224,7 @@
   border: 1px solid var(--matrix-green);
   box-shadow: 
     0 0 5px var(--matrix-green),
-    inset 0 0 5px rgba(0, 255, 65, 0.1);
+    inset 0 0 5px rgba(0, 255, 136, 0.1);
   transition: all 0.3s ease;
 }
 
@@ -245,8 +245,8 @@
 /* Hover effects - Mejorados para móvil y desktop */
 .hover-matrix-glow:hover {
   box-shadow: 
-    0 0 30px rgba(0, 255, 65, 0.6),
-    inset 0 0 10px rgba(0, 255, 65, 0.2);
+    0 0 30px rgba(0, 255, 136, 0.6),
+    inset 0 0 10px rgba(0, 255, 136, 0.2);
   transform: translateY(-2px);
   transition: all 0.3s ease;
 }
@@ -255,8 +255,8 @@
 @media (max-width: 768px) {
   .hover-matrix-glow:hover {
     box-shadow: 
-      0 0 20px rgba(0, 255, 65, 0.4),
-      inset 0 0 8px rgba(0, 255, 65, 0.15);
+      0 0 20px rgba(0, 255, 136, 0.4),
+      inset 0 0 8px rgba(0, 255, 136, 0.15);
     transform: translateY(-1px);
   }
 }
