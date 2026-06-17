@@ -10,8 +10,8 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Lazy load components for better performance
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
-const CONSULTORIA_RETIRE_REDIRECT =
-  "https://reto.wizneo.org/sprint?utm_source=wizneo_consultoria_retired&utm_medium=redirect&utm_campaign=wizneo_ai_builder_sprint";
+const CONSULTORIA_REDIRECT =
+  "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,15 +34,15 @@ const LoadingScreen = () => (
 
 const ConsultoriaRedirect = () => {
   useEffect(() => {
-    window.location.replace(CONSULTORIA_RETIRE_REDIRECT);
+    window.location.replace(CONSULTORIA_REDIRECT);
   }, []);
 
   return (
     <div className="min-h-screen bg-black text-white font-matrix flex items-center justify-center px-4">
       <p className="text-center">
-        Redirigiendo al AI Builder Sprint...{" "}
+        Redirigiendo a la sesión 1:1 con Ulises...{" "}
         <a
-          href={CONSULTORIA_RETIRE_REDIRECT}
+          href={CONSULTORIA_REDIRECT}
           className="text-matrix-green underline underline-offset-2"
         >
           Sigue aquí

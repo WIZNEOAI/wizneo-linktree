@@ -4,7 +4,7 @@
 > radicado en CDMX. Misión: preparar founders, devs y creators LATAM
 > para el nuevo mundo de la IA vía dominio práctico de AI tools,
 > transformación personal y filosofía consciente. Contenido educativo
-> gratuito + WIZNEO AI Builder Sprint 1-a-1.
+> gratuito + sesión WIZNEO 1-a-1 con Ulises.
 
 ## Para quién
 
@@ -16,7 +16,7 @@
 ## Qué hay disponible
 
 - **Reto WIZNEO** — Plan de IA 2026 personalizado, gratis (2 min): https://reto.wizneo.org
-- **WIZNEO AI Builder Sprint** — 2 horas, $500 USD, agentes/VPS/repos/context engineering: https://reto.wizneo.org/sprint
+- **WIZNEO 1:1 con Ulises** — 2 horas, $500 USD, agentes/VPS/repos/context engineering: https://cal.com/gnosixio/consultoria-express
 - **Newsletter** (próximamente): https://newsletter.wizneo.org
 
 ## Topics covered

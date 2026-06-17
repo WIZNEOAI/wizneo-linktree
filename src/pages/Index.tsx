@@ -16,15 +16,15 @@ const Index = () => {
   const links = [
     {
       icon: "agent",
-      title: "WIZNEO AI Builder Sprint — founder USD 500",
-      description: 'Valor USD 1,500. En 2 horas con Ulises montas tu base de IA: compu + cel, agentes/herramientas, contexto, repos/terminal y primer flujo real.',
-      url: "https://reto.wizneo.org/sprint?utm_source=linktree&utm_medium=hub&utm_campaign=wizneo_ai_builder_sprint",
+      title: "Agenda 1:1 con Ulises — founder USD 500",
+      description: '2 horas conmigo para ordenar tu stack y dejar tu infraestructura de inteligencia artificial corriendo: compu + cel, agentes/herramientas, contexto, repos/terminal y primer flujo real.',
+      url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1_founder",
       featured: true
     },
     {
       icon: "brain",
       title: "Reto WIZNEO 30 días (gratis)",
-      description: "Si todavía no sabes qué montar, recibe una ruta para ubicar tu primer sistema útil antes del Sprint.",
+      description: "Si todavía no sabes qué montar, recibe una ruta gratis para ubicar tu primer sistema útil antes de la sesión 1:1.",
       url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet"
     },
     {
@@ -81,7 +81,7 @@ const Index = () => {
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Sprint founder, reto gratis y señales de IA aplicada para builders que sí van a mover las manos.
+                Primero agenda 1:1 conmigo. Luego el reto gratis. Después la newsletter si todavía estás calentando.
               </p>
             </div>
           </section>
