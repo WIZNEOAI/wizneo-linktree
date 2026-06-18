@@ -16,21 +16,21 @@ const Index = () => {
   const links = [
     {
       icon: "agent",
-      title: "Agenda 1:1 con Ulises — founder USD 500",
-      description: '2 horas conmigo para ordenar tu stack y dejar tu infraestructura de inteligencia artificial corriendo: compu + cel, agentes/herramientas, contexto, repos/terminal y primer flujo real.',
+      title: "Monta tu mapa de IA conmigo — $500 USD",
+      description: '2 horas 1:1 para aterrizar tu stack, tus herramientas, tus workflows y tu siguiente plan de acción. Founder price hasta el 31 de julio.',
       url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1_founder",
       featured: true
     },
     {
       icon: "brain",
-      title: "Reto WIZNEO 30 días (gratis)",
-      description: "Si todavía no sabes qué montar, recibe una ruta gratis para ubicar tu primer sistema útil antes de la sesión 1:1.",
+      title: "Domina la inteligencia artificial en 30 días",
+      description: "Recibe gratis un plan personalizado de 4 semanas según tu nivel, tus herramientas y lo que quieres lograr.",
       url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet"
     },
     {
       icon: "newsletter",
-      title: "Newsletter WIZNEO",
-      description: "Opcional si aún estás calentando: señales semanales de IA aplicada, sin pitch eterno ni gurú barato.",
+      title: "Boletín semanal WIZNEO",
+      description: "Noticias, herramientas y oportunidades de IA explicadas sin humo y aterrizadas a la vida real.",
       url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
     }
   ];
@@ -75,13 +75,13 @@ const Index = () => {
                            leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Ya no hay excusas. Construye.
+                Prepárate para trabajar con inteligencia artificial.
               </h1>
               <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Primero agenda 1:1 conmigo. Luego el reto gratis. Después la newsletter si todavía estás calentando.
+                Aprende cómo uso IA en la vida real: herramientas, workflows, agentes y criterio para no quedarte viendo tutoriales eternos.
               </p>
             </div>
           </section>
