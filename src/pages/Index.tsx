@@ -1,37 +1,63 @@
 
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
+const founderDeadline = new Date('2026-08-01T05:59:59.000Z');
+
+function getFounderCountdown(now = Date.now()) {
+  const totalMs = Math.max(0, founderDeadline.getTime() - now);
+  const totalSeconds = Math.floor(totalMs / 1000);
+  const days = Math.floor(totalSeconds / (60 * 60 * 24));
+  const hours = Math.floor((totalSeconds - days * 60 * 60 * 24) / (60 * 60));
+  const minutes = Math.floor((totalSeconds - days * 60 * 60 * 24 - hours * 60 * 60) / 60);
+  const seconds = totalSeconds % 60;
+  return { days, hours, minutes, seconds, totalMs, isOpen: totalMs > 0 };
+}
+
+function pad(value: number) {
+  return String(value).padStart(2, '0');
+}
+
 const Index = () => {
   const { trackPageView } = useAnalytics();
+  const [countdown, setCountdown] = useState(() => getFounderCountdown());
+
+  useEffect(() => {
+    const timer = window.setInterval(() => setCountdown(getFounderCountdown()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     trackPageView('Homepage');
   }, [trackPageView]);
 
+  const offerLink = {
+    icon: "agent",
+    title: "WIZNEO AI Builder Session — 2h con Ulises",
+    description: 'Acceso directo a Ulises por 2 horas para ordenar tus herramientas, dudas, contexto, compu/cel y siguiente ruta. Founder $500 hasta el 31 de julio.',
+    url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1_founder",
+    featured: true
+  };
+
   const links = [
-    {
-      icon: "agent",
-      title: "Monta tu mapa de IA conmigo — $500 USD",
-      description: '2 horas 1:1 para aterrizar tu stack, tus herramientas, tus workflows y tu siguiente plan de acción. Founder price hasta el 31 de julio.',
-      url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1_founder",
-      featured: true
-    },
+    ...(countdown.isOpen ? [offerLink] : []),
     {
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
-      description: "Recibe gratis un plan personalizado de 4 semanas según tu nivel, tus herramientas y lo que quieres lograr.",
-      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet"
+      description: "Recibe gratis un plan personalizado para entender IA, herramientas actuales y qué hacer día por día.",
+      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet",
+      featured: false
     },
     {
       icon: "newsletter",
       title: "Boletín semanal WIZNEO",
       description: "Noticias, herramientas y oportunidades de IA explicadas sin humo y aterrizadas a la vida real.",
-      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio"
+      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio",
+      featured: false
     }
   ];
 
@@ -84,6 +110,35 @@ const Index = () => {
                 Aprende cómo uso IA en la vida real: herramientas, workflows, agentes y criterio para no quedarte viendo tutoriales eternos.
               </p>
             </div>
+          </section>
+
+          {/* Founder urgency */}
+          <section className="rounded-2xl border border-matrix-green/30 bg-black/70 p-4 sm:p-5 shadow-[inset_0_1px_0_rgba(0,255,136,0.12)]" aria-label="Ventana founder WIZNEO">
+            <div className="flex items-center justify-between gap-4">
+              <div className="text-left">
+                <p className="text-[10px] sm:text-xs font-matrix tracking-[0.24em] uppercase text-matrix-green/70">
+                  founder $500 hasta 31 julio
+                </p>
+                <p className="mt-1 text-sm sm:text-base text-gray-200 font-matrix leading-relaxed">
+                  {countdown.isOpen
+                    ? 'Acceso directo a Ulises por 2 horas. Sin clase genérica de prompts.'
+                    : 'La ventana founder cerró. Puedes entrar al reto gratis o a la newsletter.'}
+                </p>
+              </div>
+              <div className="text-right font-matrix text-matrix-green" aria-live="polite">
+                <div className="text-lg sm:text-2xl font-bold leading-none tabular-nums">
+                  {`${pad(countdown.days)}d ${pad(countdown.hours)}h ${pad(countdown.minutes)}m ${pad(countdown.seconds)}s`}
+                </div>
+                <div className="mt-1 text-[10px] uppercase tracking-[0.2em] text-gray-400">
+                  {countdown.isOpen ? 'para cierre' : 'cerrado'}
+                </div>
+              </div>
+            </div>
+            {countdown.isOpen && (
+              <p className="mt-3 text-xs text-gray-500 font-matrix leading-relaxed">
+                La IA no va a esperar a que te pongas al día. Si quieres que lo aterricemos juntos, agenda antes de que llegue a cero.
+              </p>
+            )}
           </section>
 
           {/* Links Section */}
