@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
+import NewsletterModal from '@/components/NewsletterModal';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
@@ -42,6 +43,9 @@ const Index = () => {
       {/* Background Effects - Behind everything */}
       <MatrixRain />
       <FloatingParticles />
+
+      {/* Email capture → newsletter (direct subscribe via newsletter /api/subscribe) */}
+      <NewsletterModal />
 
       {/* Main Content - Above background effects */}
       <div className="relative z-20 min-h-[100dvh] flex flex-col items-center justify-start sm:justify-center
