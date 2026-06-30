@@ -20,7 +20,8 @@ const Index = () => {
       title: "Consultoría 1:1 WIZNEO — 2h con Ulises",
       description: 'Acceso directo a Ulises por 2 horas para montar tu infraestructura de IA: herramientas, contexto, compu/cel y tu siguiente ruta. Sin clase genérica de prompts.',
       url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
-      featured: true
+      featured: true,
+      offer: "Bonus si agendas ahora: acceso a mi stack de automatizaciones y herramientas + tu lugar en Wiz AI Club (mi comunidad en Skool) cuando abra en septiembre. Precio especial USD 500 — cierra el 31 de agosto."
     },
     {
       icon: "brain",
