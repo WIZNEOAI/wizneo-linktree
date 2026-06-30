@@ -10,9 +10,10 @@ interface LinkCardProps {
   description: string;
   url: string;
   featured?: boolean;
+  offer?: string;
 }
 
-const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, featured = false }) => {
+const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, featured = false, offer }) => {
   const { trackEvent } = useAnalytics();
 
   const handleClick = () => {
@@ -68,11 +69,21 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
                         transition-colors duration-300 flex-shrink-0 sm:size-4" 
             />
           </div>
-          <p className="text-gray-300 font-matrix text-sm sm:text-base leading-relaxed 
+          <p className="text-gray-300 font-matrix text-sm sm:text-base leading-relaxed
                        group-hover:text-gray-100 transition-colors duration-300
                        line-clamp-2 sm:line-clamp-none">
             {description}
           </p>
+          {offer && (
+            <div className="mt-3 rounded-lg border border-matrix-green/30 bg-matrix-green/[0.07] px-3 py-2">
+              <p className="text-[10px] sm:text-[11px] font-matrix uppercase tracking-[0.18em] text-matrix-green mb-1">
+                Solo tomo pocas sesiones al mes
+              </p>
+              <p className="text-xs sm:text-sm font-matrix text-gray-200 leading-relaxed">
+                {offer}
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </a>
