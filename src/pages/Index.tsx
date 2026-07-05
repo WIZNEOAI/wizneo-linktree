@@ -17,11 +17,11 @@ const Index = () => {
   const links = [
     {
       icon: "agent",
-      title: "Consultoría 1:1 WIZNEO — 2h con Ulises",
-      description: 'Acceso directo a Ulises por 2 horas para montar tu infraestructura de IA: herramientas, contexto, compu/cel y tu siguiente ruta. Sin clase genérica de prompts.',
+      title: "Consultoría 1:1 WIZNEO",
+      description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
       url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
       featured: true,
-      offer: "Bonus si agendas ahora: acceso a mi stack de automatizaciones y herramientas + tu lugar en Wiz AI Club (mi comunidad en Skool) cuando abra en septiembre. Precio especial USD 500 — cierra el 31 de agosto."
+      offer: "Precio especial USD 500 — cierra el 31 de agosto."
     },
     {
       icon: "brain",
@@ -82,13 +82,13 @@ const Index = () => {
                            leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Domina la inteligencia artificial antes de que te deje atrás.
+                Mete la IA a trabajar en tu vida y tu negocio.
               </h1>
               <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Te enseño a meter IA real en tu día a día —herramientas, workflows y criterio— sin humo y sin tutoriales eternos.
+                Te comparto lo que sí funciona para que dejes de ver tutoriales y empieces a construir.
               </p>
             </div>
           </section>
