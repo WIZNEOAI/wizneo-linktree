@@ -324,6 +324,13 @@ const Consultoria = () => {
                 className="rounded-full border border-matrix-green/30"
               />
               <SocialIcon
+                url="https://www.youtube.com/@wizneoai"
+                style={{ height: 40, width: 40 }}
+                bgColor="#00FF88"
+                fgColor="#000000"
+                className="rounded-full border border-matrix-green/30"
+              />
+              <SocialIcon
                 url="https://www.tiktok.com/@wizneo.io"
                 style={{ height: 40, width: 40 }}
                 bgColor="#00FF88"
