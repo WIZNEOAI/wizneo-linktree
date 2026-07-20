@@ -9,6 +9,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 
 // Lazy load components for better performance
 const Index = lazy(() => import("./pages/Index"));
+const Blackbook = lazy(() => import("./pages/Blackbook"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const CONSULTORIA_REDIRECT =
   "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
@@ -62,6 +63,7 @@ const App = () => (
           <Suspense fallback={<LoadingScreen />}>
             <Routes>
               <Route path="/" element={<Index />} />
+              <Route path="/blackbook" element={<Blackbook />} />
               <Route path="/consultoria" element={<ConsultoriaRedirect />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />

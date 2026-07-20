@@ -25,6 +25,13 @@ const Index = () => {
     },
     {
       icon: "store",
+      title: "BLACKBOOK",
+      description: "Tres guías para entender, construir y operar agentes.",
+      url: "/blackbook",
+      featured: false
+    },
+    {
+      icon: "store",
       title: "Mis sistemas",
       description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
       url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",

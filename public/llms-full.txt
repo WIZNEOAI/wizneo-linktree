@@ -87,6 +87,18 @@ Quién la toma: alguien que ya hizo el Reto WIZNEO o tiene problema
 concreto que resolver (stack selection, agent design, content pipeline,
 funnel automation).
 
+### BLACKBOOK
+
+URL: https://www.wizneo.org/blackbook
+
+Tres guías prácticas con PDF, Markdown y un pack de trabajo:
+
+- **BLACKBOOK 01 · AI ENGINEER**: 68 páginas y AI Engineer Starter Kit de 19 archivos para elegir modelos, evaluar fine-tuning y trazar una ruta técnica.
+- **BLACKBOOK 02 · AGENTIC CODING**: 67 páginas y Agentic Coding Harness Kit de 37 archivos para preparar repositorios, contratos y evidencia antes de delegar código.
+- **BLACKBOOK 03 · INFRAESTRUCTURA DE AGENTES**: 72 páginas y Agent Infra Ops Kit de 25 archivos para desplegar, observar y recuperar agentes con límites operativos claros.
+
+Cada edición se vende por separado. El catálogo no ofrece una edición física.
+
 ### Mis sistemas (Gumroad)
 
 URL: https://wizneo.gumroad.com
@@ -238,6 +250,7 @@ different audiences. Never mix the brand palettes (WIZNEO Matrix green
 
 - https://wizneo.org → primary
 - https://www.wizneo.org → with www (canonical for sitemap)
+- https://www.wizneo.org/blackbook → catálogo de ediciones digitales BLACKBOOK
 - https://reto.wizneo.org → lead magnet (30-day AI plan)
 - https://newsletter.wizneo.org → newsletter (próximamente)
 
