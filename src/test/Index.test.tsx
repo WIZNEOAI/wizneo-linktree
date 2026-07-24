@@ -30,7 +30,7 @@ describe("Index links", () => {
       "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
     );
     expect(blackbook).toHaveAccessibleName(
-      "BLACKBOOK - Tres guías para entender, construir y operar agentes.",
+      "BLACKBOOK - Tres guías y una ruta completa para entender, construir y operar agentes.",
     );
     expect(blackbook).toHaveAttribute("href", "/blackbook");
     expect(blackbook).not.toHaveAttribute("target");

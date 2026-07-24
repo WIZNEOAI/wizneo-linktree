@@ -16,7 +16,7 @@
 ## Qué hay disponible
 
 - **WIZNEO 1:1 con Ulises** — 2 horas, $500 USD, agentes/VPS/repos/context engineering: https://cal.com/gnosixio/consultoria-wizneo
-- **BLACKBOOK** — tres ediciones digitales para entender, construir y operar agentes: https://www.wizneo.org/blackbook
+- **BLACKBOOK** — tres ediciones digitales y BLACKBOOK COMPLETE SYSTEM para entender, construir y operar agentes; precios y checkouts pendientes: https://www.wizneo.org/blackbook
 - **Mis sistemas** — ebooks, skills y agentes listos en Gumroad: https://wizneo.gumroad.com
 - **Reto WIZNEO** — Plan de IA personalizado, gratis (2 min): https://reto.wizneo.org
 - **Newsletter** — boletín semanal: https://newsletter.wizneo.org

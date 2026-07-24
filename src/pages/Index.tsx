@@ -26,7 +26,7 @@ const Index = () => {
     {
       icon: "store",
       title: "BLACKBOOK",
-      description: "Tres guías para entender, construir y operar agentes.",
+      description: "Tres guías y una ruta completa para entender, construir y operar agentes.",
       url: "/blackbook",
       featured: false
     },

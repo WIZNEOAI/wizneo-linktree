@@ -1,113 +1,54 @@
-# BLACKBOOK catalog route implementation plan
+# BLACKBOOK catalog route — RC.1 local update
 
-> **For Hermes:** Use the coding-agent lane to implement this plan task by task.
+**Status:** Implemented locally; not published
+**Branch:** `feat/blackbook-catalog-local`
+**Scope:** `/blackbook` catalog only; no Gumroad, Vercel, or external-service action.
 
-**Goal:** Add a local, production-ready `/blackbook` catalog route to the WIZNEO link hub without publishing or inventing Gumroad URLs.
+## Verified RC.1 catalog
 
-**Architecture:** Keep the current Vite/React Router/Tailwind stack. Store product metadata in a typed local module. Build one static editorial route with real WIZNEO BLACKBOOK assets. Gumroad CTAs read build-time environment variables and render an accessible unavailable state when the URLs are absent.
+| Product | Pages | Pack files | Price | Additional inclusion |
+| --- | ---: | ---: | ---: | --- |
+| BLACKBOOK 01 · AI ENGINEER | 68 | 17 | USD 49 | PDF + Markdown |
+| BLACKBOOK 02 · AGENTIC CODING | 71 | 34 | USD 49 | PDF + Markdown |
+| BLACKBOOK 03 · INFRAESTRUCTURA DE AGENTES | 72 | 22 | USD 49 | PDF + Markdown |
+| BLACKBOOK COMPLETE SYSTEM | 211 | 73 | USD 129 | All three digital books + 90-day roadmap |
 
-**Tech stack:** React 18, TypeScript, React Router 6, Tailwind 3, Vitest, Testing Library.
+All products are digital. No copy or alt text presents a physical product.
 
----
+## Local implementation
 
-## Constraints
+- `src/data/blackbookCatalog.ts` is the typed catalog source of truth for four products.
+- Checkout URLs are optional build-time inputs. Without a URL, each CTA renders the accessible, non-link state `Compra no disponible`.
+- `.env.example` declares the four optional Gumroad variables, including `VITE_GUMROAD_BLACKBOOK_COMPLETE_SYSTEM_URL`; every example value is intentionally blank.
+- The homepage retains Consultoría 1:1 first and BLACKBOOK second.
+- `public/llms.txt` and `public/llms-full.txt` mirror the catalog facts. `public/sitemap.xml` already contains `/blackbook`, so its route list does not require a change.
 
-- Preserve current homepage behavior and 1:1 priority.
-- Add BLACKBOOK as the second home card, linking to `/blackbook` with a real anchor.
-- No new dependencies.
-- No push, deploy, Vercel env mutation, Gumroad action or newsletter send.
-- Do not touch the pre-existing `.gitignore` change in the main worktree.
-- Use the canonical WIZNEO black/green visual lane.
-- Do not present hardcover mockups as available products.
-- Each digital edition costs USD 49 and is sold separately.
-- When a Gumroad URL is absent, show a disabled checkout state instead of a fake link.
+## Asset provenance
 
-## Task 1: Add catalog assets and typed data
+The expected `content/ebook*/assets/cover.png` paths are not present in the RC.1 source worktree. The exact approved individual sources are therefore the RC.1 canonical files documented in `review/BLACKBOOK-COVER-FOUNDER-APPROVAL-2026-07-24.md`:
 
-**Files:**
+- `assets/covers/blackbook-01-ai-engineer.png` — SHA-256 `9f99fe1f8d7a0c3c1c67279cfe4099f58359f44c9c664ba87194ea05651c1b07`
+- `assets/covers/blackbook-02-agentic-coding.png` — SHA-256 `af753ed6398f9c9adf74d449936accbde358ab5db88f64d2b580fa8ff1d89d11`
+- `assets/covers/blackbook-03-infraestructura-agentes.png` — SHA-256 `e0b368de389ec4a76a797057c617f5a0215e545f023f26dc8467d55c1b4c8988`
+- Bundle visual: `sales/gumroad/assets/prelaunch/blackbook-complete-system-hardcover-bundle.png` — SHA-256 `67ecc82a2316a280ff81125eb9eea0d8f375a1f159609becbf5d326f135133d3`
 
-- Create: `public/blackbook/blackbook-01-ai-engineer.png`
-- Create: `public/blackbook/blackbook-02-agentic-coding.png`
-- Create: `public/blackbook/blackbook-03-infraestructura-agentes.png`
-- Create: `src/data/blackbookCatalog.ts`
+They are copied into `public/blackbook/` without transformation.
 
-**Steps:**
+## Regression coverage
 
-1. Copy the three verified 1280 × 720 commerce covers from `/root/wizneo-blackbook/sales/gumroad/assets/*/01-cover-1280x720.png`.
-2. Define the three products with title, short fit statement, page count, pack count, price, image path and optional Gumroad URL from `import.meta.env`.
-3. Keep all external URLs `undefined` when the corresponding environment variable is absent.
-4. Add a unit test for counts, price and absent-URL behavior.
+- Catalog test locks four products, RC.1 page and pack counts, USD 49/USD 129 prices, bundle roadmap, asset path, and undefined checkout URLs without environment input.
+- Route test locks four headings, four disabled checkout states with no environment URLs, product facts, prices, and metadata.
+- Homepage test locks Consultoría 1:1 first and BLACKBOOK second.
 
-## Task 2: Build `/blackbook`
+## Verification
 
-**Files:**
-
-- Create: `src/pages/Blackbook.tsx`
-- Modify: `src/App.tsx`
-- Test: `src/test/Blackbook.test.tsx`
-
-**Steps:**
-
-1. Add a lazy-loaded route before the catch-all.
-2. Build an asymmetric editorial page with one product row per book; alternate image/text placement on desktop and collapse to one column on mobile.
-3. Use real headings, visible USD 49 price, PDF/Markdown/pack facts and a short choose-your-book guide.
-4. Render a normal `<a>` when a Gumroad URL exists. Render a labelled disabled element when it does not.
-5. Add a back link to `/`.
-6. Set the document title and description while mounted and restore them on unmount.
-7. Test headings, three products, three prices and disabled checkout state.
-
-## Task 3: Add the home-card entry
-
-**Files:**
-
-- Modify: `src/pages/Index.tsx`
-- Test: update or add a focused homepage test.
-
-**Steps:**
-
-1. Add BLACKBOOK immediately after the current 1:1 card.
-2. Link to `/blackbook` with a real anchor.
-3. Use concrete copy: `Tres guías para entender, construir y operar agentes.`
-4. Do not change the current Consultoría, Reto or newsletter destinations.
-
-## Task 4: Update public discovery files
-
-**Files:**
-
-- Modify: `public/sitemap.xml`
-- Modify: `public/llms.txt`
-- Modify: `public/llms-full.txt`
-
-**Steps:**
-
-1. Add the `/blackbook` route and concise factual product description.
-2. Keep Gumroad URLs out until the products exist.
-3. Preserve existing WIZNEO funnel references.
-
-## Task 5: Verify and commit locally
-
-**Commands:**
+Run from this worktree:
 
 ```bash
 npm run test:run
 npm run lint
 npm run build
 git diff --check
-gitleaks dir . --no-banner --redact
 ```
 
-**Browser QA:**
-
-- Run local preview.
-- Verify `/blackbook` at desktop and 375px mobile.
-- Confirm no horizontal overflow.
-- Confirm all three covers preserve aspect ratio.
-- Confirm checkout states are disabled without env URLs.
-- Confirm home BLACKBOOK card routes to `/blackbook`.
-
-**Commit:**
-
-```bash
-git add public/blackbook src/data/blackbookCatalog.ts src/pages/Blackbook.tsx src/App.tsx src/pages/Index.tsx src/test public/sitemap.xml public/llms.txt public/llms-full.txt docs/plans/2026-07-19-blackbook-catalog-route.md
-git commit -m "feat: add local BLACKBOOK catalog route"
-```
+Do not commit, push, deploy, mutate Vercel, create Gumroad products, or configure checkout URLs as part of this local-preparation lane.

@@ -11,7 +11,7 @@ vi.mock("@/hooks/useAnalytics", () => ({
 }));
 
 describe("Blackbook", () => {
-  it("renders the three verified editions and prices", () => {
+  it("renders the four verified RC.1 products and prices", () => {
     render(
       <MemoryRouter>
         <Blackbook />
@@ -30,7 +30,17 @@ describe("Blackbook", () => {
         name: "BLACKBOOK 03 · INFRAESTRUCTURA DE AGENTES",
       }),
     ).toBeInTheDocument();
+    expect(
+      screen.getByRole("heading", { name: "BLACKBOOK COMPLETE SYSTEM" }),
+    ).toBeInTheDocument();
     expect(screen.getAllByText("USD 49")).toHaveLength(3);
+    expect(screen.getByText("USD 129")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 68 páginas")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 71 páginas")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 72 páginas")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 211 páginas")).toBeInTheDocument();
+    expect(screen.getByText(/Packs de los tres BLACKBOOK · 73 archivos/)).toBeInTheDocument();
+    expect(screen.getByText("Ruta de 90 días")).toBeInTheDocument();
   });
 
   it("renders non-clickable checkout states without Gumroad URLs", () => {
@@ -42,7 +52,7 @@ describe("Blackbook", () => {
 
     const unavailableStates = screen.getAllByText("Compra no disponible");
 
-    expect(unavailableStates).toHaveLength(3);
+    expect(unavailableStates).toHaveLength(4);
     unavailableStates.forEach((state) => {
       expect(state).toHaveAttribute("aria-disabled", "true");
       expect(state.closest("a")).toBeNull();
@@ -63,7 +73,7 @@ describe("Blackbook", () => {
     expect(document.title).toBe("BLACKBOOK | WIZNEO");
     expect(document.querySelector('meta[name="description"]')).toHaveAttribute(
       "content",
-      "Tres guías digitales WIZNEO para entender, construir y operar agentes. Cada edición incluye PDF, Markdown y un pack de trabajo.",
+      "Cuatro productos digitales WIZNEO para entender, construir y operar agentes: tres BLACKBOOK y BLACKBOOK COMPLETE SYSTEM.",
     );
 
     unmount();
