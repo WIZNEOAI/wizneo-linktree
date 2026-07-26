@@ -15,9 +15,10 @@
 
 ## Qué hay disponible
 
-- **Reto WIZNEO** — Plan de IA 2026 personalizado, gratis (2 min): https://reto.wizneo.org
-- **WIZNEO 1:1 con Ulises** — 2 horas, $500 USD, agentes/VPS/repos/context engineering: https://cal.com/gnosixio/consultoria-express
-- **Newsletter** (próximamente): https://newsletter.wizneo.org
+- **WIZNEO 1:1 con Ulises** — 2 horas, $500 USD, agentes/VPS/repos/context engineering: https://cal.com/gnosixio/consultoria-wizneo
+- **Mis sistemas** — ebooks, skills y agentes listos en Gumroad: https://wizneo.gumroad.com
+- **Reto WIZNEO** — Plan de IA personalizado, gratis (2 min): https://reto.wizneo.org
+- **Newsletter** — boletín semanal: https://newsletter.wizneo.org
 
 ## Topics covered
 

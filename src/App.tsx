@@ -11,7 +11,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 const CONSULTORIA_REDIRECT =
-  "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
+  "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
 
 const queryClient = new QueryClient({
   defaultOptions: {

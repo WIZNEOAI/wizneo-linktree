@@ -5,7 +5,7 @@ import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
 const CAL_URL =
-  'https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_landing&utm_medium=web&utm_campaign=consultoria_express';
+  'https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_landing&utm_medium=web&utm_campaign=consultoria_express';
 
 const Consultoria = () => {
   const { trackPageView, trackEvent } = useAnalytics();

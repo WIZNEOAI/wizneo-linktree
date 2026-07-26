@@ -19,9 +19,16 @@ const Index = () => {
       icon: "agent",
       title: "Consultoría 1:1 WIZNEO",
       description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
-      url: "https://cal.com/gnosixio/consultoria-express?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
+      url: "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
       featured: true,
       offer: "Precio especial USD 500 — cierra el 31 de agosto."
+    },
+    {
+      icon: "store",
+      title: "Mis sistemas",
+      description: 'Ebooks, skills y agentes listos. Para cuando quieres avanzar hoy, no “algún día”.',
+      url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
+      featured: false
     },
     {
       icon: "brain",
@@ -82,7 +89,7 @@ const Index = () => {
                            leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Mete la IA a trabajar en tu vida y tu negocio.
+                Ya no hay excusas. Construye.
               </h1>
               <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
