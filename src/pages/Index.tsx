@@ -26,7 +26,7 @@ const Index = () => {
     {
       icon: "store",
       title: "Mis sistemas",
-      description: 'Ebooks, skills y agentes listos. Para cuando quieres avanzar hoy, no “algún día”.',
+      description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
       url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
       featured: false
     },
