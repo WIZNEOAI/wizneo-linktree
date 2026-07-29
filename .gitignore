@@ -33,3 +33,10 @@ dist-ssr
 *.sw?
 .vercel
 .gstack/
+
+# Codex Security artifacts must live outside this repository.
+# These guards prevent accidental commits if a command is run with a bad path.
+/.codex-security/
+/codex-security-results/
+/codex-security-findings.json
+/codex-security-results.sarif
