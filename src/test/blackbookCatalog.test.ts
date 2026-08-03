@@ -2,7 +2,7 @@ import { describe, expect, it } from "vitest";
 import { createBlackbookCatalog } from "@/data/blackbookCatalog";
 
 describe("blackbookCatalog", () => {
-  it("keeps the verified v1.0.0 product, page, pack, and price counts", () => {
+  it("keeps the verified v1.2.0 product, page, pack, and price counts", () => {
     const catalog = createBlackbookCatalog({});
 
     expect(catalog).toHaveLength(4);

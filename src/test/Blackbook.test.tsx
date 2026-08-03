@@ -6,7 +6,7 @@ import Blackbook from "@/pages/Blackbook";
 import { trackBlackbookCheckout } from "@/lib/blackbookAnalytics";
 
 describe("Blackbook", () => {
-  it("renders the four verified v1.0.0 products and prices", () => {
+  it("renders the four verified v1.2.0 products and prices", () => {
     render(
       <MemoryRouter>
         <Blackbook />
