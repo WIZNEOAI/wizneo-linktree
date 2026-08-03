@@ -6,7 +6,7 @@ import Blackbook from "@/pages/Blackbook";
 import { trackBlackbookCheckout } from "@/lib/blackbookAnalytics";
 
 describe("Blackbook", () => {
-  it("renders the four verified RC.2 products and prices", () => {
+  it("renders the four verified v1.0.0 products and prices", () => {
     render(
       <MemoryRouter>
         <Blackbook />
@@ -29,12 +29,12 @@ describe("Blackbook", () => {
       screen.getByRole("heading", { name: "BLACKBOOK COMPLETE SYSTEM" }),
     ).toBeInTheDocument();
     expect(screen.getAllByText("USD 49")).toHaveLength(3);
-    expect(screen.getByText("Precio pendiente")).toBeInTheDocument();
-    expect(screen.getByText("PDF · 68 páginas")).toBeInTheDocument();
+    expect(screen.getByText("USD 119")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 70 páginas")).toBeInTheDocument();
     expect(screen.getByText("PDF · 67 páginas")).toBeInTheDocument();
     expect(screen.getByText("PDF · 72 páginas")).toBeInTheDocument();
-    expect(screen.getByText("PDF · 207 páginas")).toBeInTheDocument();
-    expect(screen.getByText(/Packs de los tres BLACKBOOK · 81 archivos/)).toBeInTheDocument();
+    expect(screen.getByText("PDF · 209 páginas")).toBeInTheDocument();
+    expect(screen.getByText(/Packs de los tres BLACKBOOK \+ bonus · 81 archivos/)).toBeInTheDocument();
     expect(screen.getByText("Ruta de 90 días")).toBeInTheDocument();
   });
 

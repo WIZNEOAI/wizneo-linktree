@@ -2,13 +2,13 @@ import { describe, expect, it } from "vitest";
 import { createBlackbookCatalog } from "@/data/blackbookCatalog";
 
 describe("blackbookCatalog", () => {
-  it("keeps the verified RC.2 product, page, pack, and price counts", () => {
+  it("keeps the verified v1.0.0 product, page, pack, and price counts", () => {
     const catalog = createBlackbookCatalog({});
 
     expect(catalog).toHaveLength(4);
-    expect(catalog.map(({ pageCount }) => pageCount)).toEqual([68, 67, 72, 207]);
+    expect(catalog.map(({ pageCount }) => pageCount)).toEqual([70, 67, 72, 209]);
     expect(catalog.map(({ packCount }) => packCount)).toEqual([19, 37, 25, 81]);
-    expect(catalog.map(({ priceUsd }) => priceUsd)).toEqual([49, 49, 49, undefined]);
+    expect(catalog.map(({ priceUsd }) => priceUsd)).toEqual([49, 49, 49, 119]);
     expect(catalog.at(-1)).toMatchObject({
       id: "blackbook-complete-system",
       title: "BLACKBOOK COMPLETE SYSTEM",

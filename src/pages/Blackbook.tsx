@@ -72,11 +72,11 @@ const Blackbook = () => {
             </div>
             <div className="flex justify-between gap-6 border-b border-[#173b2a] py-3">
               <dt className="text-[#7da590]">Formatos</dt>
-              <dd className="text-right">PDF + MD</dd>
+              <dd className="text-right">PDF + ZIP</dd>
             </div>
             <div className="flex justify-between gap-6 py-3">
               <dt className="text-[#7da590]">Incluye</dt>
-              <dd>Pack + ruta</dd>
+              <dd>Pack + bonus</dd>
             </div>
           </dl>
         </div>
