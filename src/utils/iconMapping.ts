@@ -15,7 +15,6 @@ import {
   Youtube,
   X,
   Music,
-  ShoppingBag,
   Mail,
   LucideIcon
 } from 'lucide-react';
@@ -26,7 +25,6 @@ export const iconMap: Record<string, LucideIcon> = {
   tech: Cpu,
   phone: Phone,
   agent: Bot,
-  store: ShoppingBag,
   newsletter: Mail,
   // Redes sociales
   instagram: Instagram,

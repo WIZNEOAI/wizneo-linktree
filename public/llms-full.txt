@@ -87,13 +87,6 @@ Quién la toma: alguien que ya hizo el Reto WIZNEO o tiene problema
 concreto que resolver (stack selection, agent design, content pipeline,
 funnel automation).
 
-### Mis sistemas (Gumroad)
-
-URL: https://wizneo.gumroad.com
-
-Ebooks, skills y agentes listos para que empieces a implementar IA hoy
-como todo un profesional.
-
 ### Newsletter
 
 URL: https://newsletter.wizneo.org

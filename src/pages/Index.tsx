@@ -24,13 +24,6 @@ const Index = () => {
       offer: "Precio especial USD 500 — cierra el 31 de agosto."
     },
     {
-      icon: "store",
-      title: "Mis sistemas",
-      description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
-      url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
-      featured: false
-    },
-    {
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
       description: "Recibe gratis un plan personalizado para entender IA, herramientas actuales y qué hacer día por día.",
