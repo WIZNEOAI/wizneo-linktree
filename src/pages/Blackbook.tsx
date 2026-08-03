@@ -1,14 +1,13 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { blackbookCatalog } from "@/data/blackbookCatalog";
-import { useAnalytics } from "@/hooks/useAnalytics";
+import { trackBlackbookCheckout } from "@/lib/blackbookAnalytics";
 
 const PAGE_TITLE = "BLACKBOOK | WIZNEO";
 const PAGE_DESCRIPTION =
   "Cuatro productos digitales WIZNEO para entender, construir y operar agentes: tres BLACKBOOK y BLACKBOOK COMPLETE SYSTEM.";
 
 const Blackbook = () => {
-  const { trackPageView } = useAnalytics();
 
   useEffect(() => {
     const previousTitle = document.title;
@@ -25,8 +24,6 @@ const Blackbook = () => {
 
     document.title = PAGE_TITLE;
     description.content = PAGE_DESCRIPTION;
-    trackPageView("BLACKBOOK Catalog");
-
     return () => {
       document.title = previousTitle;
 
@@ -40,7 +37,7 @@ const Blackbook = () => {
         description.remove();
       }
     };
-  }, [trackPageView]);
+  }, []);
 
   return (
     <main className="min-h-screen bg-[#020504] text-[#ecfff5] font-matrix">
@@ -169,12 +166,15 @@ const Blackbook = () => {
                 </dl>
 
                 <div className="mt-8 flex flex-wrap items-center justify-between gap-5">
-                  <p className="text-2xl font-semibold text-[#ecfff5]">USD {product.priceUsd}</p>
+                  <p className="text-2xl font-semibold text-[#ecfff5]">
+                    {product.priceUsd ? `USD ${product.priceUsd}` : "Precio pendiente"}
+                  </p>
                   {product.gumroadUrl ? (
                     <a
                       href={product.gumroadUrl}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={() => trackBlackbookCheckout(product.id)}
                       className="inline-flex min-h-12 items-center justify-center border border-matrix-green bg-matrix-green px-5 py-3 text-sm font-semibold text-[#020504] transition-colors hover:bg-[#74ffb9] focus:outline-none focus-visible:ring-2 focus-visible:ring-matrix-green focus-visible:ring-offset-4 focus-visible:ring-offset-[#020504]"
                     >
                       {product.id === "blackbook-complete-system"

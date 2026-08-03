@@ -9,7 +9,7 @@ export interface BlackbookProduct {
   pageCount: number;
   packCount: number;
   packName: string;
-  priceUsd: number;
+  priceUsd?: number;
   imagePath: string;
   imageOrientation: "portrait" | "landscape";
   roadmapDays?: number;
@@ -36,7 +36,7 @@ export const createBlackbookCatalog = (
     title: "BLACKBOOK 01 · AI ENGINEER",
     fit: "Para ordenar modelos, contexto, delegación, memoria y verificación antes de depender de chats sueltos.",
     pageCount: 68,
-    packCount: 17,
+    packCount: 19,
     packName: "AI Engineer Starter Kit",
     priceUsd: 49,
     imagePath: "/blackbook/blackbook-01-ai-engineer.png",
@@ -47,8 +47,8 @@ export const createBlackbookCatalog = (
     id: "blackbook-02",
     title: "BLACKBOOK 02 · AGENTIC CODING",
     fit: "Para convertir una petición en un cambio de software aislado, revisado, probado y listo para decisión humana.",
-    pageCount: 71,
-    packCount: 34,
+    pageCount: 67,
+    packCount: 37,
     packName: "Agentic Coding Harness Kit",
     priceUsd: 49,
     imagePath: "/blackbook/blackbook-02-agentic-coding.png",
@@ -60,7 +60,7 @@ export const createBlackbookCatalog = (
     title: "BLACKBOOK 03 · INFRAESTRUCTURA DE AGENTES",
     fit: "Para operar agentes con runtime, seguridad, estado, observabilidad y una ruta de recuperación clara.",
     pageCount: 72,
-    packCount: 22,
+    packCount: 25,
     packName: "Agent Infra Ops Kit",
     priceUsd: 49,
     imagePath: "/blackbook/blackbook-03-infraestructura-agentes.png",
@@ -71,10 +71,9 @@ export const createBlackbookCatalog = (
     id: "blackbook-complete-system",
     title: "BLACKBOOK COMPLETE SYSTEM",
     fit: "Las tres capas en una sola ruta: entender y dirigir IA, construir con agentes y mantener la operación bajo control.",
-    pageCount: 211,
-    packCount: 73,
+    pageCount: 207,
+    packCount: 81,
     packName: "Packs de los tres BLACKBOOK",
-    priceUsd: 129,
     imagePath: "/blackbook/blackbook-complete-system.png",
     imageOrientation: "landscape",
     roadmapDays: 90,

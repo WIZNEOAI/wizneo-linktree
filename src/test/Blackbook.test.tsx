@@ -3,15 +3,10 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "react-router-dom";
 import "@testing-library/jest-dom/vitest";
 import Blackbook from "@/pages/Blackbook";
-
-vi.mock("@/hooks/useAnalytics", () => ({
-  useAnalytics: () => ({
-    trackPageView: vi.fn(),
-  }),
-}));
+import { trackBlackbookCheckout } from "@/lib/blackbookAnalytics";
 
 describe("Blackbook", () => {
-  it("renders the four verified RC.1 products and prices", () => {
+  it("renders the four verified RC.2 products and prices", () => {
     render(
       <MemoryRouter>
         <Blackbook />
@@ -34,13 +29,31 @@ describe("Blackbook", () => {
       screen.getByRole("heading", { name: "BLACKBOOK COMPLETE SYSTEM" }),
     ).toBeInTheDocument();
     expect(screen.getAllByText("USD 49")).toHaveLength(3);
-    expect(screen.getByText("USD 129")).toBeInTheDocument();
+    expect(screen.getByText("Precio pendiente")).toBeInTheDocument();
     expect(screen.getByText("PDF · 68 páginas")).toBeInTheDocument();
-    expect(screen.getByText("PDF · 71 páginas")).toBeInTheDocument();
+    expect(screen.getByText("PDF · 67 páginas")).toBeInTheDocument();
     expect(screen.getByText("PDF · 72 páginas")).toBeInTheDocument();
-    expect(screen.getByText("PDF · 211 páginas")).toBeInTheDocument();
-    expect(screen.getByText(/Packs de los tres BLACKBOOK · 73 archivos/)).toBeInTheDocument();
+    expect(screen.getByText("PDF · 207 páginas")).toBeInTheDocument();
+    expect(screen.getByText(/Packs de los tres BLACKBOOK · 81 archivos/)).toBeInTheDocument();
     expect(screen.getByText("Ruta de 90 días")).toBeInTheDocument();
+  });
+
+  it("emits only the approved checkout event payload and stays fail-open", () => {
+    const gtagMock = vi.mocked(global.gtag);
+    gtagMock.mockClear();
+
+    trackBlackbookCheckout("blackbook-02");
+
+    expect(gtagMock).toHaveBeenCalledOnce();
+    expect(gtagMock).toHaveBeenCalledWith("event", "blackbook_checkout_clicked", {
+      product: "blackbook_02",
+      source: "blackbook_catalog",
+    });
+
+    gtagMock.mockImplementationOnce(() => {
+      throw new Error("analytics unavailable");
+    });
+    expect(() => trackBlackbookCheckout("blackbook-03")).not.toThrow();
   });
 
   it("renders non-clickable checkout states without Gumroad URLs", () => {
