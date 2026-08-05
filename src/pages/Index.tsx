@@ -34,14 +34,14 @@ const Index = () => {
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
       description: "Recibe gratis un plan personalizado para entender IA, herramientas actuales y qué hacer día por día.",
-      url: "https://reto.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=lead_magnet",
+      url: "https://reto.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=lead_magnet",
       featured: false
     },
     {
       icon: "newsletter",
       title: "Boletín semanal WIZNEO",
       description: "Noticias, herramientas y oportunidades de IA explicadas sin humo y aterrizadas a la vida real.",
-      url: "https://newsletter.wizneo.org/?utm_source=linktree&utm_medium=organic&utm_campaign=bio",
+      url: "https://newsletter.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=bio",
       featured: false
     }
   ];
