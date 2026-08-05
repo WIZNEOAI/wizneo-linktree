@@ -6,6 +6,10 @@ import React, { useEffect, useRef, useState } from 'react';
 const SUBSCRIBE_URL =
   (import.meta.env.VITE_NEWSLETTER_SUBSCRIBE_URL as string | undefined) ||
   'https://newsletter.wizneo.org/api/subscribe';
+// A 1.4s el modal caía encima del visitante antes de que leyera nada: pedía el
+// correo a alguien que todavía no sabía de quién era la página. Siete segundos
+// alcanzan para ver el hero y una card, que es cuando el boletín ya significa algo.
+const OPEN_DELAY_MS = 7000;
 const SEEN_KEY = 'wizneo_news_modal_seen';
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -23,7 +27,7 @@ const NewsletterModal = () => {
     let seen = false;
     try { seen = localStorage.getItem(SEEN_KEY) === '1'; } catch { /* ignore */ }
     if (seen) return;
-    const t = window.setTimeout(() => setOpen(true), 1400);
+    const t = window.setTimeout(() => setOpen(true), OPEN_DELAY_MS);
     return () => window.clearTimeout(t);
   }, []);
 
