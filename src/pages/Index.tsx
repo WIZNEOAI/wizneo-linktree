@@ -84,10 +84,10 @@ const Index = () => {
               />
             </div>
 
-            {/* Brand label. Lleva el rol porque el subtitulo ya no lo dice y la
-                identidad tiene que quedar explicita en algun lado de la pagina. */}
-            <p className="text-xs sm:text-sm font-matrix tracking-[0.25em] uppercase text-matrix-green/70">
-              WIZNEO · Ulises Arellano · AI Engineer
+            {/* Marca y rol. El nombre se quito para que respire: sigue en el
+                <title> y en las tarjetas OG, que es donde lo busca un buscador. */}
+            <p className="text-xs sm:text-sm font-matrix tracking-[0.3em] uppercase text-matrix-green/70">
+              WIZNEO · AI Engineer
             </p>
 
             {/* Antes el H1 era motivacional ("Ya no hay excusas") y no decia a que se
