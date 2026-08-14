@@ -80,19 +80,14 @@ const Index = () => {
               />
             </div>
 
-            {/* Brand label (microcopy) */}
-            <p className="text-xs sm:text-sm font-matrix tracking-[0.3em] uppercase text-matrix-green/70">
-              WIZNEO · Ulises Arellano
+            {/* Brand label. Lleva el rol porque el subtitulo ya no lo dice y la
+                identidad tiene que quedar explicita en algun lado de la pagina. */}
+            <p className="text-xs sm:text-sm font-matrix tracking-[0.25em] uppercase text-matrix-green/70">
+              WIZNEO · Ulises Arellano · AI Engineer
             </p>
 
-            {/* Qué hace. Va antes del hero a propósito: el hero es motivacional y
-                un desconocido necesita saber a qué se dedica en los primeros segundos. */}
-            <p className="text-sm sm:text-base font-matrix text-gray-200">
-              <span className="font-semibold text-white">AI Engineer.</span>{' '}
-              Monto infraestructura de IA. Y enseño a montarla.
-            </p>
-
-            {/* Tagline as primary heading */}
+            {/* Antes el H1 era motivacional ("Ya no hay excusas") y no decia a que se
+                dedica. Ahora nombra el salto que vende y el subtitulo dice que hace. */}
             <div className="space-y-2 sm:space-y-3">
               <h1
                 id="profile-heading"
@@ -101,13 +96,13 @@ const Index = () => {
                            leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Ya no hay excusas. Construye.
+                Deja de pedirle cosas a la IA. Empieza a operarla.
               </h1>
               <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Te comparto lo que sí funciona para que dejes de ver tutoriales y empieces a construir.
+                Monto infraestructura de IA y aquí te enseño a montar la tuya.
               </p>
             </div>
           </section>
