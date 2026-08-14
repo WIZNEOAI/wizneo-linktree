@@ -19,7 +19,11 @@ const Index = () => {
       icon: "agent",
       title: "Consultoría 1:1 WIZNEO",
       description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
-      url: "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
+      // Va a la landing y no a Cal directo: quien llega al hub desde una bio es
+      // trafico frio y ahi encuentra el "¿es para ti? / no es para ti" que califica
+      // antes de la llamada. El Cal esta embebido abajo en la misma pagina, asi que
+      // no agrega un paso real. El camino corto a Cal es el QR que se da en persona.
+      url: "https://consultoria.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
       featured: true,
       offer: "Precio especial USD 500 — cierra el 31 de agosto."
     },

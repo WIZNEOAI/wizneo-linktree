@@ -10,8 +10,11 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Lazy load components for better performance
 const Index = lazy(() => import("./pages/Index"));
 const NotFound = lazy(() => import("./pages/NotFound"));
+// Apunta a la landing, igual que la card del hub. Antes mandaba directo a Cal y
+// habia dos destinos distintos para la misma intencion. La landing lleva el Cal
+// embebido, asi que no agrega un paso: agrega el filtro de "¿es para ti?".
 const CONSULTORIA_REDIRECT =
-  "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
+  "https://consultoria.wizneo.org/?utm_source=wizneo_consultoria&utm_medium=spa_redirect&utm_campaign=wizneo_1a1_founder";
 
 const queryClient = new QueryClient({
   defaultOptions: {
