@@ -23,13 +23,16 @@ const Index = () => {
       featured: true,
       offer: "Precio especial USD 500 — cierra el 31 de agosto."
     },
-    {
-      icon: "store",
-      title: "Mis sistemas",
-      description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
-      url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
-      featured: false
-    },
+    // Card "Mis sistemas" retirada el 2026-08-13: el canon pausó los infoproductos
+    // el 2026-08-03 y la tienda de Gumroad está vacía, así que la card prometía algo
+    // que no existe. Vuelve tal cual el día que haya producto publicado.
+    // {
+    //   icon: "store",
+    //   title: "Mis sistemas",
+    //   description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
+    //   url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
+    //   featured: false
+    // },
     {
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
@@ -67,20 +70,24 @@ const Index = () => {
                            rounded-full overflow-hidden matrix-border-glow hover:matrix-glow
                            transition-all duration-300 transform hover:scale-105">
               <img
-                src="/uploads/wizneo-profile.png"
-                alt="WIZNEO — Educación práctica de IA para el nuevo mundo"
+                src="/uploads/wizneo-profile.webp"
+                alt="Ulises Arellano, AI Engineer y fundador de WIZNEO"
+                width={336}
+                height={323}
                 className="w-full h-full object-cover"
                 loading="eager"
                 decoding="async"
               />
             </div>
 
-            {/* Brand label (microcopy) */}
-            <p className="text-xs sm:text-sm font-matrix tracking-[0.3em] uppercase text-matrix-green/70">
-              WIZNEO · Ulises Arellano
+            {/* Brand label. Lleva el rol porque el subtitulo ya no lo dice y la
+                identidad tiene que quedar explicita en algun lado de la pagina. */}
+            <p className="text-xs sm:text-sm font-matrix tracking-[0.25em] uppercase text-matrix-green/70">
+              WIZNEO · Ulises Arellano · AI Engineer
             </p>
 
-            {/* Tagline as primary heading */}
+            {/* Antes el H1 era motivacional ("Ya no hay excusas") y no decia a que se
+                dedica. Ahora nombra el salto que vende y el subtitulo dice que hace. */}
             <div className="space-y-2 sm:space-y-3">
               <h1
                 id="profile-heading"
@@ -89,13 +96,13 @@ const Index = () => {
                            leading-[1.04] px-2 sm:px-4 lg:px-6
                            transform transition-all duration-300 hover:scale-[1.02]"
               >
-                Ya no hay excusas. Construye.
+                Deja de pedirle cosas a la IA. Empieza a operarla.
               </h1>
               <div className="h-px w-14 sm:w-20 lg:w-24 mx-auto bg-gradient-to-r
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Te comparto lo que sí funciona para que dejes de ver tutoriales y empieces a construir.
+                Monto infraestructura de IA y aquí te enseño a montar la tuya.
               </p>
             </div>
           </section>
@@ -119,7 +126,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.instagram.com/wizneo.io/"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00FF88"
+                bgColor="#00E676"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -128,7 +135,7 @@ const Index = () => {
               <SocialIcon
                 url="https://x.com/Wizneoio"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00FF88"
+                bgColor="#00E676"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -137,7 +144,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.youtube.com/@wizneoai"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00FF88"
+                bgColor="#00E676"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -146,7 +153,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.tiktok.com/@wizneo.io"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00FF88"
+                bgColor="#00E676"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -155,7 +162,7 @@ const Index = () => {
               <SocialIcon
                 url="https://github.com/WIZNEOAI"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00FF88"
+                bgColor="#00E676"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
