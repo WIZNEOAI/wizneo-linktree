@@ -23,13 +23,16 @@ const Index = () => {
       featured: true,
       offer: "Precio especial USD 500 — cierra el 31 de agosto."
     },
-    {
-      icon: "store",
-      title: "Mis sistemas",
-      description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
-      url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
-      featured: false
-    },
+    // Card "Mis sistemas" retirada el 2026-08-13: el canon pausó los infoproductos
+    // el 2026-08-03 y la tienda de Gumroad está vacía, así que la card prometía algo
+    // que no existe. Vuelve tal cual el día que haya producto publicado.
+    // {
+    //   icon: "store",
+    //   title: "Mis sistemas",
+    //   description: 'Ebooks, skills y agentes listos para que empieces a implementar IA hoy como todo un profesional.',
+    //   url: "https://wizneo.gumroad.com/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=sistemas",
+    //   featured: false
+    // },
     {
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
@@ -67,8 +70,10 @@ const Index = () => {
                            rounded-full overflow-hidden matrix-border-glow hover:matrix-glow
                            transition-all duration-300 transform hover:scale-105">
               <img
-                src="/uploads/wizneo-profile.png"
-                alt="WIZNEO — Educación práctica de IA para el nuevo mundo"
+                src="/uploads/wizneo-profile.webp"
+                alt="Ulises Arellano, AI Engineer y fundador de WIZNEO"
+                width={336}
+                height={323}
                 className="w-full h-full object-cover"
                 loading="eager"
                 decoding="async"
@@ -78,6 +83,13 @@ const Index = () => {
             {/* Brand label (microcopy) */}
             <p className="text-xs sm:text-sm font-matrix tracking-[0.3em] uppercase text-matrix-green/70">
               WIZNEO · Ulises Arellano
+            </p>
+
+            {/* Qué hace. Va antes del hero a propósito: el hero es motivacional y
+                un desconocido necesita saber a qué se dedica en los primeros segundos. */}
+            <p className="text-sm sm:text-base font-matrix text-gray-200">
+              <span className="font-semibold text-white">AI Engineer.</span>{' '}
+              Monto infraestructura de IA. Y enseño a montarla.
             </p>
 
             {/* Tagline as primary heading */}
