@@ -20,8 +20,7 @@ const Index = () => {
       title: "Consultoría 1:1 WIZNEO",
       description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
       url: "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
-      featured: true,
-      offer: "Precio especial USD 500 — cierra el 31 de agosto."
+      featured: true
     },
     {
       icon: "store",
