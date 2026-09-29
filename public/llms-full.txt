@@ -163,13 +163,8 @@ explicadas sin humo y aterrizadas a la vida real.
 ## Identidad del creador
 
 **Ulises Arellano** es AI Engineer basado en Ciudad de México. Founder
-de:
-
-- **WIZNEO** (https://wizneo.org) — marca personal, contenido
-  educativo, mentoría
-- **Depadoc** (https://depadoc.com) — Medical SaaS, AI clínico
-- **Elderhermit** (https://elderhermit.com) — AI esotérico /
-  reflexión hermética
+de **WIZNEO** (https://wizneo.org) — marca personal, contenido
+educativo, mentoría.
 
 Stack diario: Claude Code 2.1+, Codex CLI, Cursor, n8n, Supabase,
 Convex, Vercel, Hostinger VPS, Telegram bot operación.

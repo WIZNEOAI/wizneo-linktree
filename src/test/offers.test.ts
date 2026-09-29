@@ -66,9 +66,9 @@ describe('canon 29-sep: Club primero, en lista de espera', () => {
     expect(existsSync(resolve(root, '.planning/wizneo-consultoria-url'))).toBe(false);
   });
 
-  it('WIZNEO no menciona a Gnosix en llms, index.html ni src', () => {
-    for (const f of ['public/llms.txt', 'public/llms-full.txt', 'index.html', 'src/pages/Index.tsx', 'src/lib/offers.ts']) {
-      expect(read(f), f).not.toMatch(/gnosix/i);
+  it('WIZNEO no menciona a Gnosix, Depadoc ni Elderhermit en llms, index.html ni src', () => {
+    for (const f of ['public/llms.txt', 'public/llms-full.txt', 'index.html', 'src/pages/Index.tsx', 'src/lib/offers.ts', 'README.md']) {
+      expect(read(f), f).not.toMatch(/gnosix|depadoc|elderhermit/i);
     }
   });
 

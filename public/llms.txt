@@ -35,7 +35,7 @@ WIZNEO produce contenido y mentoría sobre:
 
 - **Ulises Arellano** — AI Engineer, creador WIZNEO
 - Radicado en Ciudad de México (CDMX)
-- Builds in public: shipea SaaS (Depadoc, Elderhermit), agentic systems, content velocity
+- Builds in public: shipea SaaS, agentic systems, content velocity
 
 ### Redes y plataformas
 
