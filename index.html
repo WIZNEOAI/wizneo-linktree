@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Structured Data -->
-    <!-- TODO(ulises): la url del Club en el JSON-LD debe igualar CLUB_URL de src/lib/offers.ts (lo verifica src/test/offers.test.ts) -->
+    <!-- El Club aún no abre (CLUB_OPEN=false en src/lib/offers.ts): su Offer va sin url y en PreOrder. Al abrirlo, agrega url y quita availability. -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -49,8 +49,8 @@
         {
           "@type": "Offer",
           "name": "WIZ AI Club",
-          "description": "Comunidad privada en Skool para aprender a construir y operar un sistema propio de IA, con práctica, revisión y comunidad. Membresía mensual o anual.",
-          "url": "https://www.skool.com/",
+          "description": "Comunidad privada para aprender a construir y operar un sistema propio de IA, con práctica, revisión y comunidad. Aún no abre: hay lista de espera en la newsletter. Precio de fundador, membresía mensual o anual.",
+          "availability": "https://schema.org/PreOrder",
           "category": "Membresía",
           "priceSpecification": [
             { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "USD", "billingDuration": 1, "unitCode": "MON" },

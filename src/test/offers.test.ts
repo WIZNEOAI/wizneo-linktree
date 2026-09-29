@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { CLUB_URL, clubUrlWithUtm } from '@/lib/offers';
+import { CLUB_OPEN, CLUB_PRICE_LABEL, CLUB_URL, clubHref } from '@/lib/offers';
 
 const root = resolve(__dirname, '../..');
 const read = (p: string) => readFileSync(resolve(root, p), 'utf-8');
@@ -11,26 +11,64 @@ const jsonLd = () => {
   return JSON.parse(m![1]);
 };
 
-describe('canon 29-sep: Club primero', () => {
-  it('el Club es la primera oferta del JSON-LD y el Reto es gratis', () => {
+describe('canon 29-sep: Club primero, en lista de espera', () => {
+  it('el Club aún no abre: CLUB_OPEN=false y sin URL de Skool', () => {
+    expect(CLUB_OPEN).toBe(false);
+    expect(CLUB_URL).toBeNull();
+  });
+
+  it('el link del Club apunta a la newsletter con UTM mientras esté cerrado', () => {
+    const u = new URL(clubHref());
+    expect(u.origin).toBe('https://newsletter.wizneo.org');
+    expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club_waitlist');
+  });
+
+  it('ningún archivo publicado ni el código declara una URL de skool.com', () => {
+    for (const f of ['index.html', 'src/pages/Index.tsx', 'src/lib/offers.ts', 'public/llms.txt', 'public/llms-full.txt']) {
+      expect(read(f), f).not.toMatch(/skool\.com/i);
+    }
+  });
+
+  it('el Club es la primera oferta del JSON-LD, sin URL falsa y en PreOrder', () => {
     const offers = jsonLd().offers;
     expect(offers[0].name).toBe('WIZ AI Club');
-    expect(offers[0].url).toBe(CLUB_URL);
+    expect(offers[0].url).toBeUndefined();
+    expect(offers[0].availability).toBe('https://schema.org/PreOrder');
+    expect(offers[0].priceSpecification).toHaveLength(2);
     expect(offers[1].name).toContain('Reto');
     expect(offers[1].price).toBe('0');
   });
 
-  it('el primer link de la página es el Club, seguido de Reto y newsletter', () => {
+  it('el primer link de la página es el Club en lista de espera, seguido de Reto y newsletter', () => {
     const src = read('src/pages/Index.tsx');
     const titles = [...src.matchAll(/^\s{6}title: "([^"]+)"/gm)].map((m) => m[1]);
     expect(titles[0]).toBe('WIZ AI Club');
     expect(titles[1]).toContain('inteligencia artificial');
     expect(titles[2]).toContain('Boletín');
+    expect(src).toMatch(/Abre pronto/);
+    expect(src).toMatch(/lista de espera/i);
+    expect(src).toContain('${CLUB_PRICE_LABEL}');
+    expect(CLUB_PRICE_LABEL).toBe('USD 49/mes o USD 490/año');
   });
 
-  it('la consultoría 1:1 no aparece en página, metadata, JSON-LD ni llms', () => {
-    for (const f of ['index.html', 'src/pages/Index.tsx', 'public/llms.txt', 'public/llms-full.txt']) {
-      expect(read(f), f).not.toMatch(/consultor[ií]a 1:1|consultoria-wizneo|1-a-1|WIZNEO 1:1/i);
+  it('llms.txt y llms-full.txt anuncian lista de espera y precio de fundador', () => {
+    for (const f of ['public/llms.txt', 'public/llms-full.txt']) {
+      expect(read(f), f).toMatch(/lista de espera/i);
+      expect(read(f), f).toMatch(/USD 49\/mes o USD 490\/año/);
+    }
+  });
+
+  it('la consultoría no aparece en ningún archivo del repo y no hay redirect /consultoria', () => {
+    for (const f of ['index.html', 'src/pages/Index.tsx', 'public/llms.txt', 'public/llms-full.txt', 'README.md', 'vercel.json']) {
+      expect(read(f), f).not.toMatch(/consultor[ií]a|consultoria-wizneo|1-a-1|WIZNEO 1:1/i);
+    }
+    expect(JSON.parse(read('vercel.json')).redirects ?? []).toEqual([]);
+    expect(existsSync(resolve(root, '.planning/wizneo-consultoria-url'))).toBe(false);
+  });
+
+  it('WIZNEO no menciona a Gnosix en llms, index.html ni src', () => {
+    for (const f of ['public/llms.txt', 'public/llms-full.txt', 'index.html', 'src/pages/Index.tsx', 'src/lib/offers.ts']) {
+      expect(read(f), f).not.toMatch(/gnosix/i);
     }
   });
 
@@ -40,9 +78,9 @@ describe('canon 29-sep: Club primero', () => {
     expect(html).toMatch(/og:description" content="[^"]*WIZ AI Club/);
   });
 
-  it('el link del Club conserva la URL base y agrega UTM', () => {
-    const u = new URL(clubUrlWithUtm());
-    expect(u.origin + u.pathname).toBe(new URL(CLUB_URL).origin + new URL(CLUB_URL).pathname);
+  it('cuando el Club abra, clubHref usa la URL con UTM del Club', () => {
+    const u = new URL(clubHref('https://example.com/club', true));
+    expect(u.origin + u.pathname).toBe('https://example.com/club');
     expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club');
   });
 });

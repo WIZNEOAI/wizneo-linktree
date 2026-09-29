@@ -6,7 +6,7 @@ import FloatingParticles from '@/components/FloatingParticles';
 import NewsletterModal from '@/components/NewsletterModal';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
-import { CLUB_PRICE_LABEL, clubUrlWithUtm } from '@/lib/offers';
+import { CLUB_PRICE_LABEL, clubHref } from '@/lib/offers';
 
 const Index = () => {
   const { trackPageView } = useAnalytics();
@@ -19,8 +19,9 @@ const Index = () => {
     {
       icon: "crown",
       title: "WIZ AI Club",
-      description: `Comunidad privada para aprender a construir y operar tu propio sistema de IA. ${CLUB_PRICE_LABEL}, en Skool.`,
-      url: clubUrlWithUtm(),
+      // Mientras CLUB_OPEN sea false (src/lib/offers.ts) el bloque es lista de espera.
+      description: `Abre pronto · Entra a la lista de espera. Estoy armando la comunidad para que montes y operes tu propio sistema de IA. Precio de fundador: ${CLUB_PRICE_LABEL}.`,
+      url: clubHref(),
       featured: true
     },
     // Card "Mis sistemas" retirada el 2026-08-13: el canon pausó los infoproductos
