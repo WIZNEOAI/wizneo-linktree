@@ -6,6 +6,7 @@ import FloatingParticles from '@/components/FloatingParticles';
 import NewsletterModal from '@/components/NewsletterModal';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
+import { CLUB_PRICE_LABEL, clubUrlWithUtm } from '@/lib/offers';
 
 const Index = () => {
   const { trackPageView } = useAnalytics();
@@ -16,11 +17,10 @@ const Index = () => {
 
   const links = [
     {
-      icon: "agent",
-      title: "Consultoría 1:1 WIZNEO",
-      description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
-      // Va directo a Cal: la card es el paso, no la antesala del paso.
-      url: "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
+      icon: "crown",
+      title: "WIZ AI Club",
+      description: `Comunidad privada para aprender a construir y operar tu propio sistema de IA. ${CLUB_PRICE_LABEL}, en Skool.`,
+      url: clubUrlWithUtm(),
       featured: true
     },
     // Card "Mis sistemas" retirada el 2026-08-13: el canon pausó los infoproductos
@@ -126,7 +126,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.instagram.com/wizneo.io/"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00E676"
+                bgColor="#02FD5E"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -135,7 +135,7 @@ const Index = () => {
               <SocialIcon
                 url="https://x.com/Wizneoio"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00E676"
+                bgColor="#02FD5E"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -144,7 +144,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.youtube.com/@wizneoai"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00E676"
+                bgColor="#02FD5E"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -153,7 +153,7 @@ const Index = () => {
               <SocialIcon
                 url="https://www.tiktok.com/@wizneo.io"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00E676"
+                bgColor="#02FD5E"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]
@@ -162,7 +162,7 @@ const Index = () => {
               <SocialIcon
                 url="https://github.com/WIZNEOAI"
                 style={{ height: 48, width: 48 }}
-                bgColor="#00E676"
+                bgColor="#02FD5E"
                 fgColor="#000000"
                 className="hover-matrix-glow cursor-pointer transition-all duration-300
                           transform hover:translate-y-[-2px] hover:scale-[1.02] active:translate-y-0 active:scale-[0.98]

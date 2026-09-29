@@ -7,11 +7,11 @@
     <title>Ulises Arellano — AI Engineer | WIZNEO</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <meta name="description" content="Ulises Arellano, AI Engineer. Monto infraestructura de IA y enseño a montarla. Consultoría 1:1, reto gratis de 30 días y boletín semanal sin humo." />
+    <meta name="description" content="Ulises Arellano, AI Engineer. WIZ AI Club (USD 49/mes o USD 490/año): comunidad para construir y operar tu propio sistema de IA. Reto gratis de 30 días y boletín semanal sin humo." />
     <meta name="author" content="WIZNEO" />
 
     <meta property="og:title" content="Ulises Arellano — AI Engineer | WIZNEO" />
-    <meta property="og:description" content="Monto infraestructura de IA y enseño a montarla. Consultoría 1:1 de 2 horas, reto gratis de 30 días y boletín semanal." />
+    <meta property="og:description" content="WIZ AI Club: comunidad para construir y operar tu propio sistema de IA, USD 49/mes o USD 490/año. Reto gratis de 30 días y boletín semanal." />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="https://www.wizneo.org/og.png" />
 
@@ -24,13 +24,14 @@
     <meta name="keywords" content="WIZNEO, Ulises Arellano, agentes IA, VPS, Claude Code, Codex, context engineering, automatización, IA práctica" />
     <meta name="robots" content="index, follow" />
     <meta name="language" content="Spanish" />
-    <meta name="theme-color" content="#00E676" />
+    <meta name="theme-color" content="#02FD5E" />
     
     <!-- Preload Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <!-- Structured Data -->
+    <!-- TODO(ulises): la url del Club en el JSON-LD debe igualar CLUB_URL de src/lib/offers.ts (lo verifica src/test/offers.test.ts) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,16 +47,27 @@
       ],
       "offers": [
         {
-          "@type": "Service",
-          "name": "WIZNEO 1:1 con Ulises",
-          "description": "Sesión 1:1 de 2 horas para aterrizar tu stack, herramientas, workflows y siguiente plan de acción.",
-          "url": "https://cal.com/gnosixio/consultoria-wizneo"
+          "@type": "Offer",
+          "name": "WIZ AI Club",
+          "description": "Comunidad privada en Skool para aprender a construir y operar un sistema propio de IA, con práctica, revisión y comunidad. Membresía mensual o anual.",
+          "url": "https://www.skool.com/",
+          "category": "Membresía",
+          "priceSpecification": [
+            { "@type": "UnitPriceSpecification", "price": "49", "priceCurrency": "USD", "billingDuration": 1, "unitCode": "MON" },
+            { "@type": "UnitPriceSpecification", "price": "490", "priceCurrency": "USD", "billingDuration": 1, "unitCode": "ANN" }
+          ]
         },
         {
-          "@type": "CreativeWork",
+          "@type": "Offer",
           "name": "Reto WIZNEO 30 días",
-          "description": "Plan personalizado de 4 semanas para dominar inteligencia artificial según tu nivel, herramientas y objetivo.",
-          "url": "https://reto.wizneo.org/"
+          "price": "0",
+          "priceCurrency": "USD",
+          "url": "https://reto.wizneo.org/",
+          "itemOffered": {
+            "@type": "CreativeWork",
+            "name": "Reto WIZNEO 30 días",
+            "description": "Plan personalizado de 4 semanas para dominar inteligencia artificial según tu nivel, herramientas y objetivo."
+          }
         }
       ]
     }

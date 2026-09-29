@@ -1,8 +1,8 @@
 # WIZNEO Link Hub — Matrix
 
-Hub de enlaces de WIZNEO para dirigir atención: 1:1 directo con Ulises vía Cal primero, reto gratis segundo, newsletter como calentamiento opcional. Estética Matrix verde #00FF88 sobre negro, con tarjetas reales como anchors para tracking/QA.
+Hub de enlaces de WIZNEO para dirigir atención: WIZ AI Club (Skool) primero, reto gratis segundo, newsletter como calentamiento opcional. Estética Matrix verde #02FD5E sobre negro, con tarjetas reales como anchors para tracking/QA.
 
-![Matrix Theme](https://img.shields.io/badge/tema-matrix-00FF88?style=for-the-badge)
+![Matrix Theme](https://img.shields.io/badge/tema-matrix-02FD5E?style=for-the-badge)
 ![React](https://img.shields.io/badge/React-18.3-61DAFB?style=for-the-badge&logo=react)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.5-3178C6?style=for-the-badge&logo=typescript)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=for-the-badge&logo=tailwind-css)

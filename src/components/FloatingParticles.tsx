@@ -63,7 +63,7 @@ const FloatingParticles = React.memo(() => {
             animationDelay: `${particle.animationDelay}s`,
             animationDuration: `${particle.animationDuration}s`,
             top: `${particle.initialPosition}%`,
-            textShadow: '0 0 8px rgba(0, 255, 136, 0.4)',
+            textShadow: '0 0 8px rgba(2, 253, 94, 0.4)',
           }}
         >
           {particle.char}

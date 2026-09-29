@@ -81,7 +81,7 @@ const NewsletterModal = () => {
     >
       <div
         className="relative w-full max-w-sm rounded-2xl border border-matrix-green/40 bg-black/95 p-6
-                   shadow-[0_0_40px_rgba(0,255,136,0.15)] font-matrix
+                   shadow-[0_0_40px_rgba(2, 253, 94,0.15)] font-matrix
                    animate-in fade-in-0 zoom-in-95 slide-in-from-bottom-4 sm:slide-in-from-bottom-0 duration-300"
       >
         <button
