@@ -1,19 +1,14 @@
 /**
- * El WIZ AI Club todavía no abre (decisión de Ulises, 2026-09-29): mientras
- * CLUB_OPEN sea false, el bloque del Club es una lista de espera que apunta a la
- * suscripción de la newsletter.
+ * El WIZ AI Club abrió el 2026-10-04 (decisión de Ulises) en Skool. Sin precio
+ * en la página: el precio vive en Skool.
  *
- * Para abrirlo: pon la URL real de la comunidad en CLUB_URL, cambia CLUB_OPEN a
- * true, y actualiza copy y JSON-LD (index.html: quita `availability: PreOrder`
- * y agrega `url`), `public/llms.txt` y `public/llms-full.txt`. Los tests de
- * src/test/offers.test.ts fallarán a propósito hasta que se actualicen.
+ * Si el Club vuelve a cerrar: CLUB_OPEN = false, CLUB_URL = null y la card
+ * vuelve a apuntar a la lista de espera (CLUB_WAITLIST_URL).
  */
-export const CLUB_OPEN = false;
-export const CLUB_URL: string | null = null;
+export const CLUB_OPEN = true;
+export const CLUB_URL: string | null = 'https://www.skool.com/wiz-ai-club-4087/about';
 
 export const CLUB_WAITLIST_URL = 'https://newsletter.wizneo.org/';
-
-export const CLUB_PRICE_LABEL = 'USD 49/mes o USD 490/año';
 
 const withUtm = (base: string, campaign: string): string => {
   const url = new URL(base);

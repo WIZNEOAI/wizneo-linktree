@@ -3,10 +3,9 @@ import { useEffect } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
-import NewsletterModal from '@/components/NewsletterModal';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
-import { CLUB_PRICE_LABEL, clubHref } from '@/lib/offers';
+import { clubHref } from '@/lib/offers';
 
 const Index = () => {
   const { trackPageView } = useAnalytics();
@@ -19,8 +18,8 @@ const Index = () => {
     {
       icon: "crown",
       title: "WIZ AI Club",
-      // Mientras CLUB_OPEN sea false (src/lib/offers.ts) el bloque es lista de espera.
-      description: `Abre pronto · Entra a la lista de espera. Estoy armando la comunidad para que montes y operes tu propio sistema de IA. Precio de fundador: ${CLUB_PRICE_LABEL}.`,
+      // Abierto desde 2026-10-04 (src/lib/offers.ts). Sin precio; LinkCard no admite texto de CTA, va al final de la descripción.
+      description: "Crea imágenes, videos y contenido con IA. Construye y lanza tus propios productos. Monta agentes que atienden y venden por ti. Únete a la comunidad.",
       url: clubHref(),
       featured: true
     },
@@ -40,13 +39,6 @@ const Index = () => {
       description: "Recibe gratis un plan personalizado para entender IA, herramientas actuales y qué hacer día por día.",
       url: "https://reto.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=lead_magnet",
       featured: false
-    },
-    {
-      icon: "newsletter",
-      title: "Boletín semanal WIZNEO",
-      description: "Noticias, herramientas y oportunidades de IA explicadas sin humo y aterrizadas a la vida real.",
-      url: "https://newsletter.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=bio",
-      featured: false
     }
   ];
 
@@ -55,9 +47,6 @@ const Index = () => {
       {/* Background Effects - Behind everything */}
       <MatrixRain />
       <FloatingParticles />
-
-      {/* Email capture → newsletter (direct subscribe via newsletter /api/subscribe) */}
-      <NewsletterModal />
 
       {/* Main Content - Above background effects */}
       <div className="relative z-20 min-h-[100dvh] flex flex-col items-center justify-start sm:justify-center
@@ -103,7 +92,7 @@ const Index = () => {
                              from-transparent via-matrix-green to-transparent"></div>
               <p className="text-sm sm:text-base lg:text-lg text-gray-300 font-matrix
                             leading-relaxed px-2 sm:px-4 lg:px-6 max-w-prose mx-auto">
-                Monto infraestructura de IA y aquí te enseño a montar la tuya.
+                Te enseño a usar la IA para crear contenido, construir productos y conseguir clientes.
               </p>
             </div>
           </section>

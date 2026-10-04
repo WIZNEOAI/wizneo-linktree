@@ -4,7 +4,7 @@
 > radicado en CDMX. Misión: preparar founders, devs y creators LATAM
 > para el nuevo mundo de la IA vía dominio práctico de AI tools,
 > transformación personal y filosofía consciente. Contenido educativo
-> gratuito + WIZ AI Club, la comunidad privada (próximamente, con lista de espera).
+> gratuito + WIZ AI Club, la comunidad abierta en Skool.
 
 ## Para quién
 
@@ -15,9 +15,8 @@
 
 ## Qué hay disponible
 
-- **WIZ AI Club** — comunidad privada para construir y operar tu propio sistema de IA. Abre pronto, todavía sin fecha; entra a la lista de espera en https://newsletter.wizneo.org. Precio de fundador: USD 49/mes o USD 490/año.
+- **WIZ AI Club** — comunidad abierta para crear imágenes, videos y contenido con IA, construir y lanzar tus propios productos y montar agentes que atienden y venden por ti: https://www.skool.com/wiz-ai-club-4087/about
 - **Reto WIZNEO** — Plan de IA personalizado, gratis (2 min): https://reto.wizneo.org
-- **Newsletter** — boletín semanal: https://newsletter.wizneo.org
 
 ## Topics covered
 

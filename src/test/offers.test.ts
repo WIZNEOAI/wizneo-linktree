@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest';
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
-import { CLUB_OPEN, CLUB_PRICE_LABEL, CLUB_URL, clubHref } from '@/lib/offers';
+import { CLUB_OPEN, CLUB_URL, clubHref } from '@/lib/offers';
 
 const root = resolve(__dirname, '../..');
 const read = (p: string) => readFileSync(resolve(root, p), 'utf-8');
@@ -11,50 +11,59 @@ const jsonLd = () => {
   return JSON.parse(m![1]);
 };
 
-describe('canon 29-sep: Club primero, en lista de espera', () => {
-  it('el Club aún no abre: CLUB_OPEN=false y sin URL de Skool', () => {
-    expect(CLUB_OPEN).toBe(false);
-    expect(CLUB_URL).toBeNull();
+describe('canon 4-oct: el Club abre en Skool, sin precio ni newsletter', () => {
+  const pageFiles = ['index.html', 'src/pages/Index.tsx', 'public/llms.txt', 'public/llms-full.txt'];
+
+  it('el Club está abierto con la URL de Skool', () => {
+    expect(CLUB_OPEN).toBe(true);
+    expect(CLUB_URL).toBe('https://www.skool.com/wiz-ai-club-4087/about');
   });
 
-  it('el link del Club apunta a la newsletter con UTM mientras esté cerrado', () => {
+  it('el link del Club apunta a Skool con UTM wiz_ai_club', () => {
     const u = new URL(clubHref());
-    expect(u.origin).toBe('https://newsletter.wizneo.org');
-    expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club_waitlist');
+    expect(u.origin + u.pathname).toBe('https://www.skool.com/wiz-ai-club-4087/about');
+    expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club');
+    expect(u.searchParams.get('utm_source')).toBe('wizneo_linkhub');
   });
 
-  it('ningún archivo publicado ni el código declara una URL de skool.com', () => {
-    for (const f of ['index.html', 'src/pages/Index.tsx', 'src/lib/offers.ts', 'public/llms.txt', 'public/llms-full.txt']) {
-      expect(read(f), f).not.toMatch(/skool\.com/i);
-    }
-  });
-
-  it('el Club es la primera oferta del JSON-LD, sin URL falsa y en PreOrder', () => {
+  it('el Club es la primera oferta del JSON-LD, con URL de Skool, sin PreOrder y sin precio', () => {
     const offers = jsonLd().offers;
     expect(offers[0].name).toBe('WIZ AI Club');
-    expect(offers[0].url).toBeUndefined();
-    expect(offers[0].availability).toBe('https://schema.org/PreOrder');
-    expect(offers[0].priceSpecification).toHaveLength(2);
+    expect(offers[0].url).toBe('https://www.skool.com/wiz-ai-club-4087/about');
+    expect(offers[0].availability).toBeUndefined();
+    expect(offers[0].priceSpecification).toBeUndefined();
+    expect(offers[0].price).toBeUndefined();
     expect(offers[1].name).toContain('Reto');
     expect(offers[1].price).toBe('0');
   });
 
-  it('el primer link de la página es el Club en lista de espera, seguido de Reto y newsletter', () => {
+  it('primer link = Club, segundo = Reto, y no hay más cards', () => {
     const src = read('src/pages/Index.tsx');
     const titles = [...src.matchAll(/^\s{6}title: "([^"]+)"/gm)].map((m) => m[1]);
+    expect(titles).toHaveLength(2);
     expect(titles[0]).toBe('WIZ AI Club');
     expect(titles[1]).toContain('inteligencia artificial');
-    expect(titles[2]).toContain('Boletín');
-    expect(src).toMatch(/Abre pronto/);
-    expect(src).toMatch(/lista de espera/i);
-    expect(src).toContain('${CLUB_PRICE_LABEL}');
-    expect(CLUB_PRICE_LABEL).toBe('USD 49/mes o USD 490/año');
+    expect(src).toContain('Únete a la comunidad');
+    expect(src).not.toMatch(/CLUB_PRICE_LABEL/);
   });
 
-  it('llms.txt y llms-full.txt anuncian lista de espera y precio de fundador', () => {
+  it('no hay card de newsletter ni NewsletterModal en la página', () => {
+    const src = read('src/pages/Index.tsx');
+    expect(src).not.toMatch(/NewsletterModal/);
+    expect(src).not.toMatch(/Boletín semanal/);
+    expect(src).not.toMatch(/newsletter\.wizneo\.org/);
+  });
+
+  it('no aparece ningún precio USD 49 ni lista de espera en la página ni en llms*', () => {
+    for (const f of pageFiles) {
+      expect(read(f), f).not.toMatch(/USD\s*49|USD\s*490|\$49|lista de espera|waitlist|PreOrder/i);
+    }
+  });
+
+  it('llms.txt y llms-full.txt anuncian el Club abierto en Skool y no mencionan newsletter', () => {
     for (const f of ['public/llms.txt', 'public/llms-full.txt']) {
-      expect(read(f), f).toMatch(/lista de espera/i);
-      expect(read(f), f).toMatch(/USD 49\/mes o USD 490\/año/);
+      expect(read(f), f).toMatch(/skool\.com\/wiz-ai-club-4087\/about/);
+      expect(read(f), f).not.toMatch(/newsletter|bolet[ií]n/i);
     }
   });
 
@@ -72,16 +81,24 @@ describe('canon 29-sep: Club primero, en lista de espera', () => {
     }
   });
 
-  it('meta description y OG mencionan el Club', () => {
+  it('meta description y OG mencionan el Club y no el boletín', () => {
     const html = read('index.html');
     expect(html).toMatch(/name="description" content="[^"]*WIZ AI Club/);
     expect(html).toMatch(/og:description" content="[^"]*WIZ AI Club/);
+    expect(html).not.toMatch(/bolet[ií]n|newsletter/i);
   });
 
-  it('cuando el Club abra, clubHref usa la URL con UTM del Club', () => {
-    const u = new URL(clubHref('https://example.com/club', true));
-    expect(u.origin + u.pathname).toBe('https://example.com/club');
-    expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club');
+  it('subtítulo del hero nuevo y el viejo ya no está', () => {
+    const src = read('src/pages/Index.tsx');
+    expect(src).toContain('Te enseño a usar la IA para crear contenido, construir productos y conseguir clientes.');
+    expect(src).not.toContain('Monto infraestructura');
+    expect(src).toContain('Deja de pedirle cosas a la IA. Empieza a operarla.');
+  });
+
+  it('cerrado, clubHref cae a la lista de espera', () => {
+    const u = new URL(clubHref(null, false));
+    expect(u.origin).toBe('https://newsletter.wizneo.org');
+    expect(u.searchParams.get('utm_campaign')).toBe('wiz_ai_club_waitlist');
   });
 });
 
