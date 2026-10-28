@@ -1,4 +1,11 @@
 import { useCallback } from 'react';
+import { captureEvent } from '@/lib/posthog';
+
+export interface LinkClickEvent {
+  link_id: string;
+  link_url: string;
+  position: number;
+}
 
 interface AnalyticsEvent {
   action: string;
@@ -30,6 +37,11 @@ export const useAnalytics = () => {
     } catch (error) {
       console.error('Error tracking analytics event:', error);
     }
+  }, []);
+
+  // Clic en un link o red social: un solo punto de entrada para PostHog.
+  const trackLinkClick = useCallback((event: LinkClickEvent) => {
+    captureEvent('link_click', { ...event });
   }, []);
 
   const trackPageView = useCallback((pageName: string) => {
@@ -65,6 +77,7 @@ export const useAnalytics = () => {
 
   return {
     trackEvent,
+    trackLinkClick,
     trackPageView,
     trackTiming,
   };

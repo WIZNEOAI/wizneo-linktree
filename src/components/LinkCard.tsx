@@ -5,6 +5,8 @@ import { getIcon } from '@/utils/iconMapping';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
 interface LinkCardProps {
+  id?: string;
+  position?: number;
   icon: string;
   title: string;
   description: string;
@@ -12,8 +14,8 @@ interface LinkCardProps {
   featured?: boolean;
 }
 
-const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, featured = false }) => {
-  const { trackEvent } = useAnalytics();
+const LinkCard: React.FC<LinkCardProps> = ({ id, position, icon, title, description, url, featured = false }) => {
+  const { trackEvent, trackLinkClick } = useAnalytics();
 
   const handleClick = () => {
     trackEvent({
@@ -22,6 +24,7 @@ const LinkCard: React.FC<LinkCardProps> = ({ icon, title, description, url, feat
       label: title,
       value: 1
     });
+    trackLinkClick({ link_id: id ?? title, link_url: url, position: position ?? 0 });
   };
 
   // Función para renderizar el icono usando el nuevo sistema

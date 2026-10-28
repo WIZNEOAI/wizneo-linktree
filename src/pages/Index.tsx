@@ -3,12 +3,11 @@ import { useEffect } from 'react';
 import MatrixRain from '@/components/MatrixRain';
 import LinkCard from '@/components/LinkCard';
 import FloatingParticles from '@/components/FloatingParticles';
-import NewsletterModal from '@/components/NewsletterModal';
 import { SocialIcon } from 'react-social-icons';
 import { useAnalytics } from '@/hooks/useAnalytics';
 
 const Index = () => {
-  const { trackPageView } = useAnalytics();
+  const { trackPageView, trackLinkClick } = useAnalytics();
 
   useEffect(() => {
     trackPageView('Homepage');
@@ -16,11 +15,11 @@ const Index = () => {
 
   const links = [
     {
+      id: "skool",
       icon: "agent",
-      title: "Consultoría 1:1 WIZNEO",
-      description: 'Sesión de 2 horas conmigo para montar tu infraestructura de inteligencia artificial.',
-      // Va directo a Cal: la card es el paso, no la antesala del paso.
-      url: "https://cal.com/gnosixio/consultoria-wizneo?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wizneo_1a1",
+      title: "WIZ AI Club · la comunidad",
+      description: 'Aprende a usar la IA con criterio: crea, construye y vende. Live cada jueves.',
+      url: "https://www.skool.com/wiz-ai-club-4087/about?utm_source=wizneo_linkhub&utm_medium=primary_cta&utm_campaign=wiz_ai_club",
       featured: true
     },
     // Card "Mis sistemas" retirada el 2026-08-13: el canon pausó los infoproductos
@@ -34,17 +33,11 @@ const Index = () => {
     //   featured: false
     // },
     {
+      id: "reto",
       icon: "brain",
       title: "Domina la inteligencia artificial en 30 días",
       description: "Recibe gratis un plan personalizado para entender IA, herramientas actuales y qué hacer día por día.",
       url: "https://reto.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=lead_magnet",
-      featured: false
-    },
-    {
-      icon: "newsletter",
-      title: "Boletín semanal WIZNEO",
-      description: "Noticias, herramientas y oportunidades de IA explicadas sin humo y aterrizadas a la vida real.",
-      url: "https://newsletter.wizneo.org/?utm_source=wizneo_linkhub&utm_medium=organic&utm_campaign=bio",
       featured: false
     }
   ];
@@ -54,9 +47,6 @@ const Index = () => {
       {/* Background Effects - Behind everything */}
       <MatrixRain />
       <FloatingParticles />
-
-      {/* Email capture → newsletter (direct subscribe via newsletter /api/subscribe) */}
-      <NewsletterModal />
 
       {/* Main Content - Above background effects */}
       <div className="relative z-20 min-h-[100dvh] flex flex-col items-center justify-start sm:justify-center
@@ -115,7 +105,7 @@ const Index = () => {
                 className={`transform transition-all duration-300
                           ${link.featured ? 'hover:scale-[1.03] active:scale-[0.97]' : 'hover:scale-[1.02] active:scale-[0.98]'}`}
               >
-                <LinkCard {...link} />
+                <LinkCard {...link} position={index + 1} />
               </div>
             ))}
           </section>
@@ -125,6 +115,7 @@ const Index = () => {
             <nav className="flex justify-center items-center space-x-6 sm:space-x-8 mb-6 sm:mb-8" aria-label="Enlaces de redes sociales">
               <SocialIcon
                 url="https://www.instagram.com/wizneo.io/"
+                onClick={() => trackLinkClick({ link_id: "instagram", link_url: "https://www.instagram.com/wizneo.io/", position: 1 })}
                 style={{ height: 48, width: 48 }}
                 bgColor="#00E676"
                 fgColor="#000000"
@@ -134,6 +125,7 @@ const Index = () => {
               />
               <SocialIcon
                 url="https://x.com/Wizneoio"
+                onClick={() => trackLinkClick({ link_id: "x", link_url: "https://x.com/Wizneoio", position: 2 })}
                 style={{ height: 48, width: 48 }}
                 bgColor="#00E676"
                 fgColor="#000000"
@@ -143,6 +135,7 @@ const Index = () => {
               />
               <SocialIcon
                 url="https://www.youtube.com/@wizneoai"
+                onClick={() => trackLinkClick({ link_id: "youtube", link_url: "https://www.youtube.com/@wizneoai", position: 3 })}
                 style={{ height: 48, width: 48 }}
                 bgColor="#00E676"
                 fgColor="#000000"
@@ -152,6 +145,7 @@ const Index = () => {
               />
               <SocialIcon
                 url="https://www.tiktok.com/@wizneo.io"
+                onClick={() => trackLinkClick({ link_id: "tiktok", link_url: "https://www.tiktok.com/@wizneo.io", position: 4 })}
                 style={{ height: 48, width: 48 }}
                 bgColor="#00E676"
                 fgColor="#000000"
@@ -161,6 +155,7 @@ const Index = () => {
               />
               <SocialIcon
                 url="https://github.com/WIZNEOAI"
+                onClick={() => trackLinkClick({ link_id: "github", link_url: "https://github.com/WIZNEOAI", position: 5 })}
                 style={{ height: 48, width: 48 }}
                 bgColor="#00E676"
                 fgColor="#000000"
